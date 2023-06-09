@@ -1,7 +1,34 @@
 
+// here is  the parallax imports 
+import Tilt from 'react-parallax-tilt';
+// ends
+
+// here is the css
+import '../ExtraCss/bg.css'
+// here is the css ends
+
 const Banner = () => {
     return (
-        <div className="h-[120vh] w-full -mt-24 p-2 bg-gray-400">
+        <div className="">
+
+            <div className="bg h-screen mb-20  w-full   flex   justify-center items-center">
+                {/* this is the image side */}
+                <div className="w-1/3 ">
+                    <Tilt glareEnable={true} glareMaxOpacity={0.1} glarePosition="all">
+                        <div style={{ height: '400px', }}>
+
+                            {/* <DefaultComponent /> */}
+                            <img src="https://i.ibb.co/WfchYPr/b-removebg-preview.png"  alt=""  />
+                        </div>
+                    </Tilt>
+
+
+                </div>
+                {/* this  is the text or headding side  */}
+                <div className="w-1/2 ">
+                    <h1 className='text-[#db87f0] text-8xl font-bold leading-tight'>Let`s Build <span className='text-7xl font-bold' >_ </span> <br />  Your Career </h1>
+                </div>
+            </div>
 
         </div>
     );

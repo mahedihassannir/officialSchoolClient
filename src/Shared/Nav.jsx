@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
 
 import { FaExternalLinkAlt, FaHouseUser, FaAirFreshener } from "react-icons/fa";
-import { MdPermMedia,MdFastfood } from "react-icons/md";
+import { MdPermMedia, MdFastfood } from "react-icons/md";
 
 
 const Nav = () => {
     return (
         <div >
 
-            <nav className=" text-white flex px-10  h-24 justify-between items-center ">
+            <nav className=" text-black flex px-10  h-24 justify-between items-center ">
                 {/* logos */}
                 <div>
                     ;ljhpiou
