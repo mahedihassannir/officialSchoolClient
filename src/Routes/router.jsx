@@ -14,6 +14,8 @@ import Events from "../Pages/Events";
 import Social from "../Pages/Social";
 import Food from "../Pages/Food";
 import Profile from "../Pages/Profile";
+import Detailes from "../Pages/Detailes";
+
 
 
 const router = createBrowserRouter(
@@ -49,7 +51,8 @@ const router = createBrowserRouter(
                 },
                 {
                     path: 'Events',
-                    element: <Events></Events>
+                    element: <Events></Events>,
+                    loader: () => fetch(`http://localhost:5000/event`)
                 },
                 {
                     path: 'Social',
@@ -57,12 +60,18 @@ const router = createBrowserRouter(
                 },
                 {
                     path: 'Food',
-                    element: <Food></Food>
+                    element: <Food></Food>,
+                    loader: () => fetch(`http://localhost:5000/food`)
                 },
                 {
                     path: 'profile',
                     element: <Profile></Profile>
                 },
+                {
+                    path: 'cDetailes',
+                    element: <Detailes></Detailes>
+                },
+                
 
             ]
         }

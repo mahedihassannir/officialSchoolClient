@@ -1,10 +1,13 @@
 import About from "../Components/About";
 import Banner from "../Components/Banner";
 import Curses from "../Components/Curses";
+import Facilites from "../Components/Facilites";
 import Principal from "../Components/Principal";
 import Sponsors from "../Components/Sponsors";
 import Teachers from "../Components/Teachers";
 import BannerMain from "./BannerMain";
+import CurseIndestracture from "./CurseIndestracture";
+import Detailes from "./Detailes";
 
 
 
@@ -43,20 +46,41 @@ const Home = () => {
             {/* ends */}
 
 
+
+            {/* here is এক নজরে আমাদের websites detailes */}
+            <section>
+                <Facilites></Facilites>
+            </section>
+
             {/* out teachers */}
             <section>
 
                 <Teachers></Teachers>
             </section>
+
+            {/* ends */}
+
+            <section>
+
+                <Detailes></Detailes>
+            </section>
             {/* ends */}
 
 
-            {/*our sponsors */}
+            {/*কোর্স ইন্সট্রাক্টর */}
+            <section>
+
+                <CurseIndestracture></CurseIndestracture>
+            </section>
+            {/* ends */}
+
+
             <section>
 
                 <Sponsors></Sponsors>
             </section>
             {/* ends */}
+
 
 
         </div>

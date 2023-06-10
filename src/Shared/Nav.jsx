@@ -10,15 +10,23 @@ const Nav = () => {
 
             <nav className=" text-black flex px-10  h-24 justify-between items-center ">
                 {/* logos */}
-                <div>
-                    ;ljhpiou
-                </div>
+                <Link to="/">
+                    <h1  className="text-lg text-[#db87f0] font-bold">
+
+                        রূপসদী বৃন্দাবন
+                        <span className=" ml-2 link-accent text-[#340e8d]">
+                            উচ্চ বিদ্যালয়
+                        </span>
+                    </h1>
+                </Link>
                 <ul className="flex gap-4 items-center">
-                    <Link>Home</Link>
-                    <Link>Blog</Link>
-                    <Link to='/OurTeachers'>OurTeachers</Link>
-                    <Link to="OurTeachers">my classes</Link>
-                    <Link className="btn">enroll now</Link>
+                    <Link className="hover:text-[#340e8d]" >Home</Link>
+                    <Link className="hover:text-[#340e8d]" >Blog</Link>
+                    <Link className="hover:text-[#340e8d]" >Register in school</Link>
+                    <Link className="hover:text-[#340e8d]" to='/OurTeachers'>OurTeachers</Link>
+                    <Link className="hover:text-[#340e8d]" to="OurTeachers">Curses</Link>
+                    <Link className="hover:text-[#340e8d]" to="OurTeachers">my classes</Link>
+                    <Link className=" hover:text-[#340e8d] btn">enroll now</Link>
 
                     <div className=" cursor-pointer indicator">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" /></svg>
@@ -56,6 +64,16 @@ const Nav = () => {
 
                                 <li><a className="flex items-center gap-2"> <MdFastfood></MdFastfood> Food</a></li>
                             </Link>
+
+                            <Link to="/Food">
+
+                                <li><a className="flex items-center gap-2"> <MdFastfood></MdFastfood> cart</a></li>
+                            </Link>
+                            <Link to="/">
+
+                                <li><a className="flex items-center gap-2"> <MdFastfood></MdFastfood> register in school</a></li>
+                            </Link>
+
                             <Link to="/">
 
                                 <li><a className="text-redy-500 flex items-center gap-2"><FaExternalLinkAlt></FaExternalLinkAlt> Logout</a></li>
@@ -69,7 +87,7 @@ const Nav = () => {
 
             </nav>
 
-        </div>
+        </div >
     );
 };
 
