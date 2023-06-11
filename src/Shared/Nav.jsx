@@ -1,17 +1,23 @@
 import { Link } from "react-router-dom";
 
-import { FaExternalLinkAlt, FaHouseUser, FaAirFreshener } from "react-icons/fa";
+import { FaExternalLinkAlt, FaHouseUser, FaAirFreshener, FaRegistered, FaSign } from "react-icons/fa";
 import { MdPermMedia, MdFastfood } from "react-icons/md";
 
 
 const Nav = () => {
+
+    const user = false
+
+
+
+
     return (
         <div >
 
             <nav className=" text-black flex px-10  h-24 justify-between items-center ">
                 {/* logos */}
                 <Link to="/">
-                    <h1  className="text-lg text-[#db87f0] font-bold">
+                    <h1 className="text-lg text-[#db87f0] font-bold">
 
                         রূপসদী বৃন্দাবন
                         <span className=" ml-2 link-accent text-[#340e8d]">
@@ -71,18 +77,65 @@ const Nav = () => {
                             </Link>
                             <Link to="/">
 
-                                <li><a className="flex items-center gap-2"> <MdFastfood></MdFastfood> register in school</a></li>
+                                <li><a className=""> <button className="flex items-center gap-2"><MdFastfood></MdFastfood> register in school</button></a></li>
                             </Link>
 
-                            <Link to="/">
 
-                                <li><a className="text-redy-500 flex items-center gap-2"><FaExternalLinkAlt></FaExternalLinkAlt> Logout</a></li>
-                            </Link>
+                            {
+
+                                user ? <>
+
+
+
+                                </>
+                                    : <>
+
+
+                                        <Link to="/Register">
+
+                                            <li><a className="flex items-center gap-2"> <FaRegistered></FaRegistered> register</a></li>
+                                        </Link>
+                                    </>
+
+                            }
+
+
+                            {
+                                user ? <>
+                                    <Link to="/">
+
+                                        <li><a className="text-redy-500 flex items-center gap-2"><FaExternalLinkAlt></FaExternalLinkAlt> Logout</a></li>
+                                    </Link>
+                                </>
+                                    :
+                                    <>
+                                        <Link to="/">
+
+                                            <li><a className="text-redy-500 flex items-center gap-2"><FaSign></FaSign> Login</a></li>
+                                        </Link>
+                                    </>
+                            }
+
                         </ul>
                     </div>
 
                     {/* this is profile icon */}
-                    <Link>Login</Link>
+                    {
+                        user ?
+                            <>
+                                <Link to="/">
+
+                                    <li><a className="text-redy-500 flex items-center gap-2"><FaExternalLinkAlt></FaExternalLinkAlt> Logout</a></li>
+                                </Link>
+
+                            </> :
+                            <>
+                                <Link to="/Login">Login</Link>
+                            </>
+
+                    }
+
+
                 </ul>
 
             </nav>
