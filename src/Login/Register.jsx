@@ -1,13 +1,26 @@
 import { useRef } from "react";
+import { ContexM } from "../Authentication/AuProvider";
+import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
 
 const Register = () => {
 
+    // here is the contex provider create contex 
+
+    const { creareUser } = useContext(ContexM)
+
+
     const ImageRef = useRef(null)
 
+    // this is image hosting url
     const uploadUrl = `https://api.imgbb.com/1/upload?key=ab19e4cb2cdbd9eef876755bbb698633`
 
 
     console.log(uploadUrl);
+
+    // navigating 
+    const naviage = useNavigate()
+    // ends
 
     const handleRegister = (e) => {
         e.preventDefault()
@@ -26,14 +39,36 @@ const Register = () => {
         const packetOFImage = new FormData()
         packetOFImage.append("image", imageDetailes)
 
-        fetch(uploadUrl, {
-            method: "POST",
-            body: packetOFImage
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
+
+
+
+        creareUser(email, password)
+            .then(res => {
+                const user = res.user
+                console.log(user);
+
+                // here is teh image upload system 
+
+
+
+                if (user.email) {
+                    alert("user created done")
+                    fetch(uploadUrl, {
+                        method: "POST",
+                        body: packetOFImage
+                    })
+                        .then(res => res.json())
+                        .then(data => {
+                            console.log(data);
+                        })
+                }
+                naviage("/")
+
             })
+            .catch(err => {
+                console.log(err);
+            })
+
 
 
     }

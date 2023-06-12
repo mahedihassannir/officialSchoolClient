@@ -17,7 +17,7 @@ const Facilites = () => {
             {/* this is detailes of facilitys  */}
             <section className="mt-4">
 
-                <div className="grid grid-cols-3 w-11/12 mx-auto  px-[54px]  py-2">
+                <div className="grid grid-cols-3 w-11/12 mx-auto  px-[117px]  py-2">
 
                     {/* col start */}
                     <div className="w-[350px] h-[300px] border-2 hover:border-[#db87f0] cursor-zoom-in ">

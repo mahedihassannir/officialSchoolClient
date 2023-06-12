@@ -8,7 +8,9 @@ import { useEffect } from 'react';
 
 const auth = getAuth(app)
 
+// contex makeed 
 export const ContexM = createContext(null)
+// ends
 
 const AuProvider = ({ children }) => {
 

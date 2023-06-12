@@ -1,15 +1,48 @@
+import { useContext } from "react";
 import { FaDollarSign } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { ContexM } from "../Authentication/AuProvider";
+
+// tost 
+// import Swal from 'sweetalert2'
 
 const FoodSingle = ({ data }) => {
 
+
+    // user from the contex 
+    const { user } = useContext(ContexM)
+
+    // this is teh get the item from the buy btn 
     const addCart = (item) => {
 
-        const product = { item, }
+        const product = { item, email: user.email }
+
         console.log(product);
 
-        // const getPrice = item.price - 10
-        // console.log(getPrice);
+        fetch(`http://localhost:5000/carts`, {
+            method: "POST",
+            headers: {
+                "content-type": "application/json"
+            },
+            body: JSON.stringify(product)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+
+                if (data.insertedId) {
+                    alert("add to cart done")
+                    // Swal.fire({
+                    //     position: 'top-end',
+                    //     icon: 'success',
+                    //     title: 'Your work has been saved',
+                    //     showConfirmButton: false,
+                    //     timer: 1500
+                    // })
+                }
+            })
+
+
 
     }
 
