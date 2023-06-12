@@ -9,7 +9,7 @@ const Facilites = () => {
             <div className="text-center ">
                 <h1 className="text-3xl font-bold pb-2">এক নজরে আমাদের রিডাক্স কোর্স
                 </h1>
-                
+
                 <p className="text-lg">এই কোর্সে যা যা থাকছে</p>
 
             </div>
@@ -17,7 +17,7 @@ const Facilites = () => {
             {/* this is detailes of facilitys  */}
             <section className="mt-4">
 
-                <div className="grid grid-cols-3 w-11/12 mx-auto  px-[117px]  py-2">
+                <div className="grid grid-cols-3 w-11/12 mx-auto  px-[54px]  py-2">
 
                     {/* col start */}
                     <div className="w-[350px] h-[300px] border-2 hover:border-[#db87f0] cursor-zoom-in ">

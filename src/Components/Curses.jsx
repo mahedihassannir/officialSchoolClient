@@ -19,7 +19,7 @@ const Curses = () => {
 
                 {
                     data.map(res => <div key={res._id}>
-                        
+
                     </div>)
                 }
             </div>

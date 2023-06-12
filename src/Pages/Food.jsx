@@ -9,7 +9,10 @@ const Food = () => {
 
     return (
         <div>
-            <div className="">
+
+            <h1 className="text-[#db87f0] text-4xl text-center font-bold mb-10">আমাদের স্কুলের খাবার</h1>
+
+            <div className="my-10 grid grid-cols-5 gap-2">
                 {
                     data.map(res => <FoodSingle key={res._id} data={res}></FoodSingle>)
                 }
