@@ -4,18 +4,19 @@ import { Link } from "react-router-dom";
 import { ContexM } from "../Authentication/AuProvider";
 
 // tost 
-// import Swal from 'sweetalert2'
+import Swal from 'sweetalert2'
+import useCart from "../hooks/Usecart";
 
 const FoodSingle = ({ data }) => {
-
-
     // user from the contex 
     const { user } = useContext(ContexM)
+    // use cart 
+    const [, refetch] = useCart()
 
     // this is teh get the item from the buy btn 
     const addCart = (item) => {
 
-        const product = { item, email: user.email }
+        const product = { name: item.name, price: item.price, category: item.category, email: user.email, id: item.id, image: item.image, recipy: item.recipy }
 
         console.log(product);
 
@@ -31,15 +32,17 @@ const FoodSingle = ({ data }) => {
                 console.log(data);
 
                 if (data.insertedId) {
-                    alert("add to cart done")
-                    // Swal.fire({
-                    //     position: 'top-end',
-                    //     icon: 'success',
-                    //     title: 'Your work has been saved',
-                    //     showConfirmButton: false,
-                    //     timer: 1500
-                    // })
+                    // alert("add to cart done")
+                    // here is teh animated tost for add to cart
+                    Swal.fire({
+                        position: 'top-end',
+                        icon: 'success',
+                        title: `product add to cart done`,
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
                 }
+                refetch()
             })
 
 
