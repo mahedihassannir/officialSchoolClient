@@ -5,10 +5,15 @@ import { useContext } from "react";
 const useCart = () => {
     const { user } = useContext(ContexM);
 
+    const token = localStorage.getItem("jwtToken")
+    console.log(token);
+
     const { refetch, data: cart = [] } = useQuery({
         queryKey: ['Cart', user?.email],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/carts?email=${user?.email}`)
+            const res = await fetch(`http://localhost:5000/carts?email=${user?.email}`, {
+                headers: { authorization: `barer ${token}` }
+            })
             console.log(res);
             return res.json();
         },

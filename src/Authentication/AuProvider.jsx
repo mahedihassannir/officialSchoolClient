@@ -5,6 +5,7 @@ import app from './firebase';
 import { createContext } from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import axios from 'axios';
 
 const auth = getAuth(app)
 
@@ -43,6 +44,20 @@ const AuProvider = ({ children }) => {
         const off = onAuthStateChanged(auth, watch => {
             console.log(watch);
             Setuser(watch)
+
+            if (watch) {
+
+                axios.post(`http://localhost:5000/jwt`, { email: watch.email })
+                    .then(data => {
+                        console.log("token", data.data.token);
+                        localStorage.setItem("jwtToken", data.data.token)
+                    })
+            }
+            else {
+                localStorage.removeItem('jwtToken')
+            }
+
+
         })
         return (() => {
             off

@@ -7,7 +7,7 @@ const Food = () => {
 
 
 
-    return (g
+    return (    
         <div>
 
             <h1 className="text-[#db87f0] text-4xl text-center font-bold mb-10">আমাদের স্কুলের খাবার</h1>

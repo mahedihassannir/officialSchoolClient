@@ -13,7 +13,7 @@ import useCart from "../hooks/Usecart";
 
 const Nav = () => {
     // here is teh user form the user contex 
-    const { user } = useContext(ContexM)
+    const { user, Logout } = useContext(ContexM)
     // contex ends
 
     // cart form the usecart hook
@@ -25,7 +25,19 @@ const Nav = () => {
 
     console.log('cart', cart.length);
 
+    const handleLogout = () => {
+        Logout()
+            .then(res => {
+                const user = res.user
+                console.log(user);
 
+                // if()
+
+            })
+            .catch(err => {
+                console.log(err);
+            })
+    }
 
 
 
@@ -161,7 +173,7 @@ const Nav = () => {
                                 user ? <>
                                     <Link to="/">
 
-                                        <li><a className="text-redy-500 flex items-center gap-2"><FaExternalLinkAlt></FaExternalLinkAlt> Logout</a></li>
+                                        <li><a className="text-redy-500 flex items-center gap-2" onClick={handleLogout}><FaExternalLinkAlt></FaExternalLinkAlt> Logout</a></li>
                                     </Link>
                                 </>
                                     :
@@ -182,7 +194,7 @@ const Nav = () => {
                             <>
                                 <Link to="/">
 
-                                    <li><a className="text-redy-500 flex items-center gap-2"><FaExternalLinkAlt></FaExternalLinkAlt> Logout</a></li>
+                                    <li><a className="text-redy-500 flex items-center gap-2"onClick={handleLogout}><FaExternalLinkAlt></FaExternalLinkAlt> Logout</a></li>
                                 </Link>
 
                             </> :
