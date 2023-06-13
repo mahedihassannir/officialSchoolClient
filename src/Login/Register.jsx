@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { ContexM } from "../Authentication/AuProvider";
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
+import Swal from "sweetalert2";
 
 const Register = () => {
 
@@ -52,7 +53,14 @@ const Register = () => {
 
 
                 if (user.email) {
-                    alert("user created done")
+                    Swal.fire({
+                        position: 'top-end',
+                        icon: 'success',
+                        title: `account create successfully`,
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+
                     fetch(uploadUrl, {
                         method: "POST",
                         body: packetOFImage

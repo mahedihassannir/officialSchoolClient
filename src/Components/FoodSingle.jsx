@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { FaDollarSign } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, } from "react-router-dom";
 import { ContexM } from "../Authentication/AuProvider";
 
 // tost 
@@ -10,8 +10,17 @@ import useCart from "../hooks/Usecart";
 const FoodSingle = ({ data }) => {
     // user from the contex 
     const { user } = useContext(ContexM)
+
     // use cart 
     const [, refetch] = useCart()
+
+    // navigating user in to the login
+
+
+    const disableBtn = true
+
+
+
 
     // this is teh get the item from the buy btn 
     const addCart = (item) => {
@@ -19,6 +28,8 @@ const FoodSingle = ({ data }) => {
         const product = { name: item.name, price: item.price, category: item.category, email: user.email, id: item.id, image: item.image, recipy: item.recipy }
 
         console.log(product);
+
+
 
         fetch(`http://localhost:5000/carts`, {
             method: "POST",
@@ -44,6 +55,7 @@ const FoodSingle = ({ data }) => {
                 }
                 refetch()
             })
+
 
 
 
@@ -80,7 +92,7 @@ const FoodSingle = ({ data }) => {
 
                     </div>
 
-                    <button onClick={() => addCart(data)} className="btn hover:text-[#340e8d]  hover:bg-[#db87f0] ">Book now</button>
+                    <button disabled={user?"":disableBtn} onClick={() => addCart(data)} className="btn hover:text-[#340e8d]  hover:bg-[#db87f0] ">Book now</button>
 
 
                 </div>
