@@ -17,20 +17,28 @@ const AuProvider = ({ children }) => {
 
     const [user, Setuser] = useState(null)
 
+    // loader 
+    const [loader, SetLoader] = useState(true)
+    // ends
+
+
     // user cretae
     const creareUser = (email, password) => {
+        SetLoader(true)
         return createUserWithEmailAndPassword(auth, email, password)
     }
     // ends
 
     // login user
     const singinUser = (email, password) => {
+        SetLoader(true)
         return signInWithEmailAndPassword(auth, email, password)
     }
     // ends
 
     // logout user
     const Logout = () => {
+        SetLoader(true)
         return signOut(auth)
     }
     // ends
@@ -44,6 +52,8 @@ const AuProvider = ({ children }) => {
         const off = onAuthStateChanged(auth, watch => {
             console.log(watch);
             Setuser(watch)
+            // loader false to stop loading when the loaded done
+            SetLoader(false)
 
             if (watch) {
 
@@ -75,6 +85,7 @@ const AuProvider = ({ children }) => {
         creareUser,
         singinUser,
         Logout,
+        loader,
     }
 
 

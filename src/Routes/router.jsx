@@ -69,6 +69,7 @@ import Qwiz from "../DashBoard/UserPages/Qwiz";
 import { Result } from "postcss";
 
 import USerProfile from "../DashBoard/UserPages/USerProfile";
+import PrivateRoute from "../Private/PrivateRoute";
 
 //ends of the routs import
 
@@ -96,7 +97,7 @@ const router = createBrowserRouter(
                 },
                 {
                     path: 'Blog',
-                    element: <Blog></Blog>
+                    element: <PrivateRoute><Blog></Blog></PrivateRoute>
                 },
                 {
                     path: 'OurTeachers',
@@ -122,7 +123,9 @@ const router = createBrowserRouter(
                 },
                 {
                     path: 'profile',
-                    element: <Profile></Profile>
+                    element: <PrivateRoute>
+                        <Profile></Profile>
+                    </PrivateRoute>
                 },
                 {
                     path: 'cDetailes',
@@ -149,7 +152,10 @@ const router = createBrowserRouter(
         // here is teh dashboard route starts
         {
             path: "Dashboard",
-            element: <DashBoardManage></DashBoardManage>,
+            element: <PrivateRoute>
+
+                <DashBoardManage></DashBoardManage>
+            </PrivateRoute>,
             children: [
                 {
                     path: "userHoeme",
