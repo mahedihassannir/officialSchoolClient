@@ -3,9 +3,11 @@ import Sidebar from "./Slidebar/Sidebar";
 
 const DashBoardManage = () => {
     return (
-        <div>
+        <div className="flex w-full ">
 
             <Sidebar></Sidebar>
+
+
             <Outlet></Outlet>
 
         </div>
