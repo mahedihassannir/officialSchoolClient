@@ -1,5 +1,5 @@
 
-const Result = () => {
+const Marks = () => {
     return (
         <div>
             
@@ -7,4 +7,4 @@ const Result = () => {
     );
 };
 
-export default Result;
+export default Marks;

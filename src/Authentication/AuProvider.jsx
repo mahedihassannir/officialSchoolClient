@@ -55,6 +55,8 @@ const AuProvider = ({ children }) => {
             // loader false to stop loading when the loaded done
             SetLoader(false)
 
+            
+
             if (watch) {
 
                 axios.post(`http://localhost:5000/jwt`, { email: watch.email })

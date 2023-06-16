@@ -66,10 +66,14 @@ import Mycart from "../DashBoard/UserPages/Mycart";
 
 import Qwiz from "../DashBoard/UserPages/Qwiz";
 
+import result from "../DashBoard/UserPages/Result";
+
 import { Result } from "postcss";
 
 import USerProfile from "../DashBoard/UserPages/USerProfile";
 import PrivateRoute from "../Private/PrivateRoute";
+import Marks from "../DashBoard/UserPages/Result";
+import AnnountsMent from "../Pages/AnnountsMent";
 
 //ends of the routs import
 
@@ -134,6 +138,10 @@ const router = createBrowserRouter(
                 {
                     path: 'cart',
                     element: <Cart></Cart>
+                },
+                {
+                    path: 'notify',
+                    element: <AnnountsMent></AnnountsMent>
                 },
 
                 // this route for teh food detailes page 
@@ -203,27 +211,27 @@ const router = createBrowserRouter(
                     element: <ALLTeachers></ALLTeachers>
                 },
                 {
-                    path: "ALLUser",
+                    path: "aLLUser",
                     element: <ALLUser></ALLUser>
                 },
                 {
-                    path: "Books",
+                    path: "books",
                     element: <Books></Books>
                 },
                 {
-                    path: "Mycart",
+                    path: "mycart",
                     element: <Mycart></Mycart>
                 },
                 {
-                    path: "Qwiz",
+                    path: "qwiz",
                     element: <Qwiz></Qwiz>
                 },
                 {
-                    path: "Result",
-                    element: <Result></Result>
+                    path: "result",
+                    element: <Marks></Marks>
                 },
                 {
-                    path: "USerProfile",
+                    path: "sSerProfile",
                     element: <USerProfile></USerProfile>
                 },
 

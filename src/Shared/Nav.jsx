@@ -57,13 +57,13 @@ const Nav = () => {
                     </h1>
                 </Link>
                 <ul className="flex gap-4 items-center">
-                    <Link className="hover:text-[#340e8d]" >Home</Link>
-                    <Link className="hover:text-[#340e8d] " >Blog</Link>
-                    <Link className="hover:text-[#340e8d]" >Register in school</Link>
-                    <Link className="hover:text-[#340e8d]" to='/OurTeachers'>OurTeachers</Link>
-                    <Link className="hover:text-[#340e8d]" to="OurTeachers">Curses</Link>
-                    <Link className="hover:text-[#340e8d]" to="OurTeachers">my classes</Link>
-                    <Link className=" hover:text-[#340e8d] btn">enroll now</Link>
+                    <Link className="hover:text-[#db87f9] hover:shadow" >Home</Link>
+                    <Link className="hover:text-[#db87f9] hover:shadow " >Blog</Link>
+                    <Link className="hover:text-[#db87f9] hover:shadow" >Register in school</Link>
+                    <Link className="hover:text-[#db87f9] hover:shadow" to='/OurTeachers'>OurTeachers</Link>
+                    <Link className="hover:text-[#db87f9] hover:shadow" to="OurTeachers">Curses</Link>
+                    <Link className="hover:text-[#db87f9] hover:shadow" to="OurTeachers">my classes</Link>
+                    <Link className="hover:text-[#db87f0] btn">enroll now</Link>
 
 
 
@@ -194,7 +194,7 @@ const Nav = () => {
                             <>
                                 <Link to="/">
 
-                                    <li><a className="text-redy-500 flex items-center gap-2"onClick={handleLogout}><FaExternalLinkAlt></FaExternalLinkAlt> Logout</a></li>
+                                    <li><a className="text-redy-500 flex items-center gap-2" onClick={handleLogout}><FaExternalLinkAlt></FaExternalLinkAlt> Logout</a></li>
                                 </Link>
 
                             </> :
