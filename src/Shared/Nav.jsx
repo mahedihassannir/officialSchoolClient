@@ -7,6 +7,7 @@ import { useContext } from "react";
 // contex form the authprovider
 import { ContexM } from "../Authentication/AuProvider";
 import useCart from "../hooks/Usecart";
+import { useState } from "react";
 // ends
 
 
@@ -39,11 +40,17 @@ const Nav = () => {
             })
     }
 
+    const [dark, SetDark] = useState(true)
+
+    const darkmode = document.getElementById("dakmmode")
+
+
+
 
 
 
     return (
-        <div >
+        <div className="">
 
             <nav className=" text-black flex px-10  h-24 justify-between items-center ">
                 {/* logos */}
@@ -65,7 +72,11 @@ const Nav = () => {
                     <Link className="hover:text-[#db87f9] hover:shadow" to="OurTeachers">my classes</Link>
                     <Link className="hover:text-[#db87f0] btn">enroll now</Link>
 
-
+                    <button onClick={()=>SetDark(!dark)} className="btn">
+                    {
+                        dark?"dark":"light"
+                    }
+                    </button>
 
                     {/* here is the cart icon */}
                     <div className="flex-none">
