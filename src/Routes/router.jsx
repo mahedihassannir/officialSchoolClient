@@ -88,8 +88,10 @@ const router = createBrowserRouter(
             children: [
                 {
                     path: '/',
-                    element: <Home></Home>
-                },
+                    element: <PrivateRoute>
+                        <Home></Home>
+                    </PrivateRoute>
+                }, 
 
                 {
                     path: 'Login',
@@ -113,12 +115,14 @@ const router = createBrowserRouter(
                 },
                 {
                     path: 'Events',
-                    element: <Events></Events>,
+                    element: <PrivateRoute>
+                        <Events></Events>
+                    </PrivateRoute>,
                     loader: () => fetch(`http://localhost:5000/event`)
                 },
                 {
-                    path: 'Social',
-                    element: <Social></Social>
+                    path: 'social',
+                    element: <PrivateRoute><Social></Social></PrivateRoute>
                 },
                 {
                     path: 'Food',
@@ -137,11 +141,11 @@ const router = createBrowserRouter(
                 },
                 {
                     path: 'cart',
-                    element: <Cart></Cart>
+                    element: <PrivateRoute><Cart></Cart></PrivateRoute>
                 },
                 {
                     path: 'notify',
-                    element: <AnnountsMent></AnnountsMent>
+                    element: <PrivateRoute><AnnountsMent></AnnountsMent></PrivateRoute>
                 },
 
                 // this route for teh food detailes page 

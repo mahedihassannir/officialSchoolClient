@@ -26,7 +26,7 @@ const About = () => {
 
                 </div>
                 <div className="w-1/2 ml-10  ">
-                    <img src="https://learnwithsumit.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Finstructor.de111715.jpg&w=828&q=75" alt="" />
+                    <img loading="lazy" src="https://learnwithsumit.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Finstructor.de111715.jpg&w=828&q=75" alt="" />
                 </div>
             </div>
         </div>

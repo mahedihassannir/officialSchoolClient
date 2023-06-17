@@ -142,7 +142,7 @@ const Nav = () => {
                             </Link>
                             {/* emds */}
 
-                            <Link to="/Social">
+                            <Link to="/social">
 
                                 <li><a className="flex items-center gap-2"> <MdPermMedia></MdPermMedia> Social</a></li>
                             </Link>

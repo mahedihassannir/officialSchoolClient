@@ -1,10 +1,15 @@
 
+
 const Event = ({ data }) => {
     console.log(data);
+
     return (
-        <div>
+
+        <div className="py-3">
             <div>
-                <h1>{data.name}</h1>
+                <div className="w-[400px] h-[400px] border-2 ">
+
+                </div>
             </div>
         </div>
     );

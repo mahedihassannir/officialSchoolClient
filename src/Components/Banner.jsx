@@ -18,7 +18,7 @@ const Banner = () => {
                         <div style={{ height: '400px', }}>
 
                             {/* <DefaultComponent /> */}
-                            <img src="https://i.ibb.co/WfchYPr/b-removebg-preview.png" alt="" data-aos="zoom-out-right" />
+                            <img loading='lazy' src="https://i.ibb.co/WfchYPr/b-removebg-preview.png" alt="" data-aos="zoom-out-right" />
                         </div>
                     </Tilt>
 

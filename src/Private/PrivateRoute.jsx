@@ -2,6 +2,12 @@ import { useContext } from "react";
 import { ContexM } from "../Authentication/AuProvider";
 import { Navigate } from "react-router-dom";
 
+// animation from lottiee react 
+
+import Lottie from 'lottie-react'
+
+import loaderanimation from '../../public/animationsForWebupdate/parpul.json'
+
 const PrivateRoute = ({ children }) => {
 
 
@@ -9,7 +15,11 @@ const PrivateRoute = ({ children }) => {
     const { user, loader } = useContext(ContexM)
 
     if (loader) {
-        return <h1>mahedi............mhaedui...........</h1>
+        return <div className="w-full h-screen flex justify-between items-center">
+
+            <Lottie className=" h-[400px] w-1/2 mx-auto" loop={true} animationData={loaderanimation} />
+
+        </div>
     }
 
     if (user) {
