@@ -66,14 +66,13 @@ import Mycart from "../DashBoard/UserPages/Mycart";
 
 import Qwiz from "../DashBoard/UserPages/Qwiz";
 
-import result from "../DashBoard/UserPages/Result";
-
-import { Result } from "postcss";
+// import result from "../DashBoard/UserPages/Result";
 
 import USerProfile from "../DashBoard/UserPages/USerProfile";
 import PrivateRoute from "../Private/PrivateRoute";
 import Marks from "../DashBoard/UserPages/Result";
 import AnnountsMent from "../Pages/AnnountsMent";
+import Postinfo from "../Components/SocialMediaCompos/Postinfo";
 
 //ends of the routs import
 
@@ -91,7 +90,7 @@ const router = createBrowserRouter(
                     element: <PrivateRoute>
                         <Home></Home>
                     </PrivateRoute>
-                }, 
+                },
 
                 {
                     path: 'Login',
@@ -114,11 +113,12 @@ const router = createBrowserRouter(
                     element: <Mod></Mod>
                 },
                 {
-                    path: 'Events',
+                    path: 'events',
                     element: <PrivateRoute>
                         <Events></Events>
                     </PrivateRoute>,
-                    loader: () => fetch(`http://localhost:5000/event`)
+                    loader:()=>fetch(`http://localhost:5000/event`)
+
                 },
                 {
                     path: 'social',
@@ -147,6 +147,12 @@ const router = createBrowserRouter(
                     path: 'notify',
                     element: <PrivateRoute><AnnountsMent></AnnountsMent></PrivateRoute>
                 },
+
+                {
+                    path: 'postInfo',
+                    element: <PrivateRoute><Postinfo></Postinfo></PrivateRoute>
+                },
+
 
                 // this route for teh food detailes page 
                 {

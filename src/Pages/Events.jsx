@@ -1,20 +1,94 @@
 import { useLoaderData } from "react-router-dom";
-import Event from "../Components/Event";
+
+// css from extra css
+import '../ExtraCss/event.css'
 
 const Events = () => {
 
     const data = useLoaderData()
 
 
+    for (let img of data) {
+        console.log(img);
+    }
+
     return (
-        <div className="w-full pb-10">
-            <div className="">
-                {
-                    data.map(res => <Event key={res._id} data={res}></Event>)
-                }
+        <div className="w-full pb-10 ">
+
+            <div className="m-5 ">
+                <p className="text-2xl font-bold">Total <span className="text-red-500">events</span> : {data.length}</p>
+
             </div>
-        </div>
+
+            <div className="grid grid-cols-3 gap-5">
+
+
+                {
+                    data.map(res => <div key={res._id}>
+                        <div className="w-[400px] h-[400px] border-2 ">
+
+
+                            <div className="w-full ">
+                                <img src={res.image} className="w-full h-[250px]" alt="" />
+
+                            </div>
+
+                            <div className="pl-3 pt-5">
+
+                                <div className="">
+
+                                    <p className="text-lg ">event name : {res.title}</p>
+                                </div>
+                                <div className="">
+
+                                </div>
+                                <div className="pt-5 pl-3">
+                                    <button id="btn" className="">
+                                        view detailes
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>)
+                }
+
+
+            </div >
+        </div >
     );
 };
 
 export default Events;
+
+
+
+/**
+ * 
+ * 
+ * <div>
+                            <div className="w-[400px] h-[400px] border-2 ">
+
+
+                                <div >
+                                    <img className="w-full h-[250px]" src={data.image} />
+                                </div>
+
+                                <div className="pl-3 pt-5">
+
+                                    <div className="">
+
+                                        <p className="text-lg ">event name : </p>
+                                    </div>
+                                    <div className="">
+
+                                    </div>
+                                    <div className="pt-5 pl-3">
+                                        <button id="btn" className="">
+                                            view detailes
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+ * 
+ */

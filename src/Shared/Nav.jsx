@@ -132,7 +132,7 @@ const Nav = () => {
                                 </li>
                             </Link>
                             {/* end of profile link */}
-                            <Link to="/Events">
+                            <Link to="/events">
                                 <li><a className="flex items-center gap-2"> <FaAirFreshener></FaAirFreshener>Events</a></li>
                             </Link>
 

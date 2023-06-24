@@ -27,9 +27,7 @@ const FoodSingle = ({ data }) => {
 
         const product = { name: item.name, price: item.price, category: item.category, email: user.email, id: item.id, image: item.image, recipy: item.recipy }
 
-        console.log(product);
-
-
+       
 
         fetch(`http://localhost:5000/carts`, {
             method: "POST",
@@ -40,7 +38,7 @@ const FoodSingle = ({ data }) => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+                
 
                 if (data.insertedId) {
                     // alert("add to cart done")

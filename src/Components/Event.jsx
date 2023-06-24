@@ -1,18 +1,24 @@
 
+// extra css from extra css file
 
-const Event = ({ data }) => {
-    console.log(data);
+
+import "../ExtraCss/event.css"
+import { useEffect } from "react";
+import { useState } from "react";
+
+const Event = () => {
+
+
 
     return (
 
         <div className="py-3">
-            <div>
-                <div className="w-[400px] h-[400px] border-2 ">
-
-                </div>
-            </div>
+           
         </div>
     );
+
 };
 
+
 export default Event;
+

@@ -6,8 +6,7 @@ const useCart = () => {
     const { user } = useContext(ContexM);
 
     const token = localStorage.getItem("jwtToken")
-    console.log(token);
-
+    
     const { refetch, data: cart = [] } = useQuery({
         queryKey: ['Cart', user?.email],
         queryFn: async () => {

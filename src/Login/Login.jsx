@@ -24,8 +24,7 @@ const Login = () => {
         const name = from.name.value
         const email = from.email.value
         const password = from.password.value
-        console.log(name, email, password);
-
+      
 
 
         singinUser(email, password)
