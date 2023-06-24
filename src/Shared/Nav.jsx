@@ -66,7 +66,7 @@ const Nav = () => {
                 <ul className="flex gap-4 items-center">
                     <Link className="hover:text-[#db87f9] hover:shadow" >Home</Link>
                     <Link className="hover:text-[#db87f9] hover:shadow " >Blog</Link>
-                    <Link className="hover:text-[#db87f9] hover:shadow" >Register in school</Link>
+                    <Link className="hover:text-[#db87f9] hover:shadow" to="/registerinSchool" >Register in school</Link>
                     <Link className="hover:text-[#db87f9] hover:shadow" to='/OurTeachers'>OurTeachers</Link>
                     <Link className="hover:text-[#db87f9] hover:shadow" to="OurTeachers">Curses</Link>
                     <Link className="hover:text-[#db87f9] hover:shadow" to="OurTeachers">my classes</Link>
@@ -155,7 +155,7 @@ const Nav = () => {
 
                                 <li><a className="flex items-center gap-2"> <MdFastfood></MdFastfood> cart <span className="text-red-400">{cart?.length || +0} </span></a></li>
                             </Link>
-                            <Link to="/">
+                            <Link to="/registerinSchool">
 
                                 <li><a className=""> <button className="flex items-center gap-2"><MdFastfood></MdFastfood> register in school</button></a></li>
                             </Link>

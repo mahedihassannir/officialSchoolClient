@@ -1,5 +1,12 @@
 import { useRef } from "react";
 
+
+const key = `0f4aa5e4abaf119c694fb653f9d54503`
+// making upload photo in the photo storage 
+const imgbbuploadUrl = `https://api.imgbb.com/1/upload?expiration=600&key=${key}`  // making upload photo in the photo storage  ends
+
+
+
 const Postinfo = () => {
 
 
@@ -8,10 +15,21 @@ const Postinfo = () => {
     const imageRef = useRef(null)
     // img graping ends
 
-    const key = `0f4aa5e4abaf119c694fb653f9d54503`
-    // making upload photo in the photo storage 
-    const imgbbuploadUrl = `https://api.imgbb.com/1/upload?expiration=600&key=${key}`  // making upload photo in the photo storage  ends
-    
+
+
+
+    const file = imageRef.current.files[0]
+    console.log(file);
+
+
+    // pacate for image
+
+
+    const imgdetailes = new FormData()
+
+    imgdetailes.append('img', file)
+
+
 
     // handle the posting in the server 
     const handlePost = (e) => {
@@ -22,11 +40,7 @@ const Postinfo = () => {
         // imgge upload related work 
 
 
-        const file = imageRef.current.files[0]
-      
-        const Imagedaat = new FormData()
 
-        Imagedaat.append('image', file)
 
 
         const title = from.title.value
@@ -35,17 +49,19 @@ const Postinfo = () => {
         const infos = { title, description }
         console.log(infos);
 
+
         fetch(imgbbuploadUrl, {
             method: "POST",
-            body: imgbbuploadUrl
+            body: imgdetailes
         })
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-
-                const image = data?.data?.display_url
-                console.log(image);
             })
+
+
+
+
 
     }
 

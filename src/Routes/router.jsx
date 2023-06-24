@@ -73,6 +73,8 @@ import PrivateRoute from "../Private/PrivateRoute";
 import Marks from "../DashBoard/UserPages/Result";
 import AnnountsMent from "../Pages/AnnountsMent";
 import Postinfo from "../Components/SocialMediaCompos/Postinfo";
+import DetailEvent from "../Pages/DetailEvent";
+import RegisterInSchool from "../Pages/RegisterInSchool";
 
 //ends of the routs import
 
@@ -117,7 +119,7 @@ const router = createBrowserRouter(
                     element: <PrivateRoute>
                         <Events></Events>
                     </PrivateRoute>,
-                    loader:()=>fetch(`http://localhost:5000/event`)
+                    loader: () => fetch(`http://localhost:5000/event`)
 
                 },
                 {
@@ -151,6 +153,16 @@ const router = createBrowserRouter(
                 {
                     path: 'postInfo',
                     element: <PrivateRoute><Postinfo></Postinfo></PrivateRoute>
+                },
+                {
+                    path: '/events/:id',
+                    element: <PrivateRoute><DetailEvent></DetailEvent></PrivateRoute>,
+                    loader: ({ params }) => fetch(`http://localhost:5000/event/${params.id}`)
+                },
+                {
+                    path: 'registerinSchool',
+                    element: <PrivateRoute><RegisterInSchool></RegisterInSchool></PrivateRoute>,
+
                 },
 
 

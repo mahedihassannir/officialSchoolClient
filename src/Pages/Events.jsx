@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 // css from extra css
 import '../ExtraCss/event.css'
@@ -11,6 +11,8 @@ const Events = () => {
     for (let img of data) {
         console.log(img);
     }
+
+    const admin = false
 
     return (
         <div className="w-full pb-10 ">
@@ -42,11 +44,24 @@ const Events = () => {
                                 <div className="">
 
                                 </div>
-                                <div className="pt-5 pl-3">
-                                    <button id="btn" className="">
-                                        view detailes
-                                    </button>
+                                <div className="flex">
+
+                                    <Link to={`/events/${res._id}`} className="pt-5 pl-3">
+                                        <button id="btn" className="">
+                                            view detailes
+                                        </button>
+                                    </Link>
+
+                                    {
+                                        admin &&
+                                        <div className="pt-5 pl-3">
+                                            <button id="btn" className="">
+                                                delete
+                                            </button>
+                                        </div>
+                                    }
                                 </div>
+
                             </div>
                         </div>
                     </div>)
