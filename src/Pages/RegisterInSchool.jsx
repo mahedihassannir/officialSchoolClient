@@ -1,7 +1,7 @@
 // animation packeg
 import Lottie from 'lottie-react'
-
 import commingsoon from '../../public/newsectionaddloging/boylearn.json'
+
 
 const RegisterInSchool = () => {
     return (
@@ -10,6 +10,7 @@ const RegisterInSchool = () => {
 
             <div>
 
+                {/* animation for new comming soon */}
                 <div>
                     <Lottie animationData={commingsoon} />
                 </div>

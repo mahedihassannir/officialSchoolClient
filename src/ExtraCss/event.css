@@ -9,3 +9,23 @@
   border: none;
   border-radius: 5px;
 }
+
+/* profile */
+
+.profile {
+  display: grid;
+  grid-template-columns: 3fr 5fr;
+}
+
+/* profile banner */
+.profileBanner {
+  background-image: url("https://miro.medium.com/v2/resize:fit:1400/1*Sdfm4E98ugZGQ-u5Xoa83g.png");
+  width: 100%;
+  padding: 20px;
+  height: 200px;
+  border-radius: 4px;
+  
+  background-size: cover;
+  box-sizing: border-box;
+
+}
