@@ -1,4 +1,7 @@
 
+// css
+import '../ExtraCss/event.css'
+
 const Principal = () => {
     return (
         <div className=" ">
@@ -7,7 +10,7 @@ const Principal = () => {
                 {/* this is image side  */}
                 <div className="w-1/2 h-[700px]  ">
 
-                    <img loading="lazy" className="h-[500px]" src="https://i.ibb.co/t42jtLp/picmain.png" alt="" data-aos="fade-up"
+                    <img loading="lazy" className=" radd h-[500px]" src="https://scontent.fdac157-1.fna.fbcdn.net/v/t39.30808-6/346656194_183997590871461_8220043281865064854_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=gB2YQswKsYUAX_BvsyC&_nc_ht=scontent.fdac157-1.fna&oh=00_AfDWOicIzjwhZ8g0uqlZSC4_77qquJu-Q-uPGoowFF6ZLA&oe=649D79CB" alt="" data-aos="fade-up"
                         data-aos-anchor-placement="top-center" />
 
                 </div>

@@ -7,7 +7,7 @@ const Facilites = () => {
 
             {/* hedding */}
             <div className="text-center ">
-                <h1 className="text-3xl font-bold pb-2">এক নজরে আমাদের রিডাক্স কোর্স
+                <h1 className="text-3xl font-bold pb-2">এক নজরে আমাদের <span className="text-[#db87f9]">রিডাক্স</span> কোর্স
                 </h1>
 
                 <p className="text-lg">এই কোর্সে যা যা থাকছে</p>
@@ -40,7 +40,8 @@ const Facilites = () => {
                     {/* col start */}
                     <div data-aos="fade-up"
                         data-aos-anchor-placement="bottom-bottom" className="w-[350px] h-[300px] border-2 hover:border-[#db87f0] cursor-zoom-in ">
-                        <div className="flex justify-center mt-10 mb-3">
+                        <div data-aos="fade-right"
+                        data-aos-anchor-placement="top-center" className="flex justify-center mt-10 mb-3">
                             <BsCameraVideo className="  text-5xl text-pink-400 "></BsCameraVideo>
                         </div>
                         {/* here is the text title */}

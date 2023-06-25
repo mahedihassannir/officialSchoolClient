@@ -5,14 +5,16 @@ const CurseIndestracture = () => {
             {/* this is the hedding of the instracture */}
 
             <div className=" my-10 text-center ">
-                <h1 className="text-3xl font-bold">কোর্স ইন্সট্রাক্টর</h1>
+                <h1 className="text-3xl font-bold" data-aos="fade-up"
+                        data-aos-anchor-placement="top-center">কোর্স ইন্সট্রাক্টর</h1>
             </div>
             {/* ends */}
 
             <div className="flex justify-center px-20">
                 <div className="w-1/2 border-r-2 border-yellow-500">
-                    <img src="https://learnwithsumit.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Finstructor.de111715.jpg&w=828&q=75" alt="" data-aos="fade-up"
-                        data-aos-anchor-placement="bottom-bottom" />
+                    <img  className="w-[400px] h-[400px] rounded-b-2xl"  src="https://scontent.fdac157-1.fna.fbcdn.net/v/t39.30808-1/300380165_108087278695389_3362624229960892656_n.jpg?stp=c0.13.320.320a_dst-jpg_p320x320&_nc_cat=109&ccb=1-7&_nc_sid=7206a8&_nc_ohc=rUbMZJH3ai8AX-UaoYG&_nc_ht=scontent.fdac157-1.fna&oh=00_AfBPixypAK01fQrRzh2JvamMQ0iqhC4Ingr-8VVb3roMjQ&oe=649C71ED"
+                        data-aos="fade-up"
+                        data-aos-anchor-placement="top-center" />
                 </div>
                 <div className="w-1/2 pl-4 ">
 

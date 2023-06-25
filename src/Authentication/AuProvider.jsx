@@ -1,6 +1,6 @@
 
 
-import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut } from 'firebase/auth'
+import { GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from 'firebase/auth'
 import app from './firebase';
 import { createContext } from 'react';
 import { useState } from 'react';
@@ -36,6 +36,16 @@ const AuProvider = ({ children }) => {
     }
     // ends
 
+    // login with google
+
+    const provider = new GoogleAuthProvider()
+
+    const loginwithpopup = () => {
+
+        return signInWithPopup(auth, provider)
+
+    }
+
     // logout user
     const Logout = () => {
         SetLoader(true)
@@ -55,7 +65,7 @@ const AuProvider = ({ children }) => {
             // loader false to stop loading when the loaded done
             SetLoader(false)
 
-            
+
 
             if (watch) {
 
@@ -88,6 +98,7 @@ const AuProvider = ({ children }) => {
         singinUser,
         Logout,
         loader,
+        loginwithpopup
     }
 
 

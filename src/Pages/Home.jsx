@@ -8,6 +8,7 @@ import Teachers from "../Components/Teachers";
 import BannerMain from "./BannerMain";
 import CurseIndestracture from "./CurseIndestracture";
 import Detailes from "./Detailes";
+import VideoIntro from "./VideoIntro";
 
 
 
@@ -35,9 +36,15 @@ const Home = () => {
 
             {/* this is our curses  */}
             <section>
+                <VideoIntro></VideoIntro>
+            </section>
+            {/* ends */}
+            
+            <section>
                 <Curses></Curses>
             </section>
             {/* ends */}
+
 
             {/* this is about section */}
             <section>

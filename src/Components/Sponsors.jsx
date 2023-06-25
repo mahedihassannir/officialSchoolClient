@@ -2,18 +2,18 @@
 
 // here is teh react marque 
 import Marquee from "react-fast-marquee";
-import { RiSecurePaymentFill} from "react-icons/ri";
+import { RiSecurePaymentFill } from "react-icons/ri";
 // here is teh react marque  ends
 
 const Sponsors = () => {
     return (
-        <div className="w-full h-[60vh] ">
+        <div className="w-full py-10 ">
             <div >
                 <h4 className="text-4xl font-bold text-[#db87f0] my-5 flex items-center justify-center gap-4"><RiSecurePaymentFill></RiSecurePaymentFill>  আমাদের স্পনসর</h4>
             </div>
 
             {/* here is use react marque */}
-            <div className="mt-32">
+            <div className="mt-10">
 
                 <Marquee className="grdi gap-7" speed={100}>
 
