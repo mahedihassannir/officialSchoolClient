@@ -193,7 +193,7 @@ const router = createBrowserRouter(
                 },
 
                 {
-                    path: "AdminHome",
+                    path: "adminHome",
                     element: <AdminHome></AdminHome>
                 },
                 {
@@ -209,15 +209,15 @@ const router = createBrowserRouter(
                     element: <AddBlogs></AddBlogs>
                 },
                 {
-                    path: "AddTeachers",
+                    path: "addTeachers",
                     element: <AddTeachers></AddTeachers>
                 },
                 {
-                    path: "Addevent",
+                    path: "addevent",
                     element: <Addevent></Addevent>
                 },
                 {
-                    path: "ADDFood",
+                    path: "aDDFood",
                     element: <ADDFood></ADDFood>
                 },
                 {

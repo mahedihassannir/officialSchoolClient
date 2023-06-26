@@ -3,7 +3,7 @@ import Sidebar from "./Slidebar/Sidebar";
 
 const DashBoardManage = () => {
     return (
-        <div className="flex bg-black  w-full ">
+        <div className="flex bg-white  w-full ">
 
             <Sidebar></Sidebar>
 

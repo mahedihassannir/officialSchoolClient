@@ -2,7 +2,7 @@
 
 const ADDFood = () => {
     return (
-        <div>
+        <div className="w-full px-2 h-screen    ">
             
         </div>
     );
