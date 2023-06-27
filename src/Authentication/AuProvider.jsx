@@ -71,7 +71,7 @@ const AuProvider = ({ children }) => {
 
                 axios.post(`http://localhost:5000/jwt`, { email: watch.email })
                     .then(data => {
-                        console.log("token", data.data.token);
+                        // console.log("token", data.data.token);
                         localStorage.setItem("jwtToken", data.data.token)
                     })
             }

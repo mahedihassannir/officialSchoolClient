@@ -11,7 +11,7 @@ import '../ExtraCss/event.css'
 const DetailEvent = () => {
 
     const data = useLoaderData()
-    console.log({ data });
+   
 
     // in this data ki ki ase event ee ta oo bose jabe video er section eee
 

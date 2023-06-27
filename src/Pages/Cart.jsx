@@ -12,8 +12,7 @@ const Cart = () => {
 
 
     const [cart, refetch] = useCart()
-    console.log(cart.length);
-    console.log(cart);
+  
 
     // here is the delete method
     const handleDeleteCart = (id) => {
@@ -22,7 +21,7 @@ const Cart = () => {
         })
             .then(res => res.json())
             .then(info => {
-                console.log(info);
+            
                 if (info.deletedCount > 0) {
 
                     Swal.fire({

@@ -19,8 +19,7 @@ const Postinfo = () => {
 
 
     const file = imageRef.current.files[0]
-    console.log(file);
-
+    
 
     // pacate for image
 
@@ -47,7 +46,7 @@ const Postinfo = () => {
         const description = from.description.value
 
         const infos = { title, description }
-        console.log(infos);
+       
 
 
         fetch(imgbbuploadUrl, {
@@ -56,7 +55,7 @@ const Postinfo = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+               
             })
 
 

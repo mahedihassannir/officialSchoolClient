@@ -1,7 +1,7 @@
 import { useContext } from "react";
 
 import { ContexM } from "../Authentication/AuProvider";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 
@@ -19,7 +19,7 @@ const Login = () => {
         loginwithpopup()
             .then(res => {
                 const user = res.user
-                console.log(user);
+                
                 naviage("/")
             })
             .catch(err => {
@@ -45,7 +45,7 @@ const Login = () => {
         singinUser(email, password)
             .then(res => {
                 const user = res.user
-                console.log(user);
+                
 
                 if (user.email) {
                     Swal.fire({
@@ -112,6 +112,10 @@ const Login = () => {
                             </div>
 
                         </div>
+                        {/* li.nk to go out the register page */}
+                        <div className="pl-10 py-2">
+                            <Link className="link" to='/register'>New to this site</Link>
+                        </div>
 
                         <div className="text-center ">
                             <button className="py-3 w-11/12 mx-auto hover:border-[#db87f0] hover:text-[#db87f0] 2 border-2 mt-4" type="submit">Register</button>
@@ -127,8 +131,8 @@ const Login = () => {
                     </div>
                 </form>
 
-            </div>
-        </div>
+            </div >
+        </div >
 
 
     );

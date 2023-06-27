@@ -17,7 +17,7 @@ const Register = () => {
     const uploadUrl = `https://api.imgbb.com/1/upload?key=ab19e4cb2cdbd9eef876755bbb698633`
 
 
-    console.log(uploadUrl);
+
 
     // navigating 
     const naviage = useNavigate()
@@ -31,11 +31,9 @@ const Register = () => {
         const name = from.name.value
         const email = from.email.value
         const password = from.password.value
-        console.log(name, email, password);
 
 
         const imageDetailes = ImageRef.current.files[0]
-        console.log(imageDetailes);
 
         const packetOFImage = new FormData()
         packetOFImage.append("image", imageDetailes)
@@ -46,10 +44,27 @@ const Register = () => {
         creareUser(email, password)
             .then(res => {
                 const user = res.user
-                console.log(user);
+
+                console.log({ emailform: user.email });
+
+                const totalinfo = { email: user.email, name: user.displayName, photo: user.photoURL, provider: user.providerId }
+
+                console.log(totalinfo);
 
                 // here is teh image upload system 
 
+                fetch(`http://localhost:5000/users`, {
+                    method: 'POST',
+                    headers: {
+                        "Content-type": "application/json"
+                    },
+                    body: JSON.stringify( totalinfo )
+                })
+
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                    })
 
 
                 if (user.email) {
@@ -67,7 +82,9 @@ const Register = () => {
                     })
                         .then(res => res.json())
                         .then(data => {
-                            console.log(data);
+
+                            // console.log(data);
+
                         })
                 }
                 naviage("/")

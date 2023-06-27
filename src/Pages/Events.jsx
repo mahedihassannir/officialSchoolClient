@@ -9,7 +9,7 @@ const Events = () => {
 
 
     for (let img of data) {
-        console.log(img);
+      
     }
 
     const admin = false

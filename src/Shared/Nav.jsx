@@ -24,13 +24,13 @@ const Nav = () => {
 
     // ends
 
-    console.log('cart', cart.length);
+  
 
     const handleLogout = () => {
         Logout()
             .then(res => {
                 const user = res.user
-                console.log(user);
+                
 
                 // if()
 
