@@ -2,23 +2,25 @@ import { Link, useLoaderData } from "react-router-dom";
 
 // css from extra css
 import '../ExtraCss/event.css'
+import IsAnmin from "../hooks/IsAnmin";
 
 const Events = () => {
 
     const data = useLoaderData()
 
 
-    for (let img of data) {
+    // for (let img of data) {
       
-    }
+    // }
 
-    const admin = false
+    const [isAdmin] = IsAnmin()
+    
 
     return (
         <div className="w-full pb-10 ">
 
             <div className="m-5 ">
-                <p className="text-2xl font-bold">Total <span className="text-red-500">events</span> : {data.length}</p>
+                <p className="text-2xl font-bold">সব <span className="text-red-500">প্রোগ্রাম</span> : {data.length}</p>
 
             </div>
 
@@ -53,7 +55,7 @@ const Events = () => {
                                     </Link>
 
                                     {
-                                        admin &&
+                                        isAdmin &&
                                         <div className="pt-5 pl-3">
                                             <button id="btn" className="">
                                                 delete

@@ -12,9 +12,12 @@ import VideoIntro from "./VideoIntro";
 
 
 
+import '../ExtraCss/bg.css'
+
 const Home = () => {
     return (
-        <div>
+        // for hiding
+        <div className="hidinginmobile">
             {/* this is banner section */}
 
             <section className="">
@@ -39,7 +42,7 @@ const Home = () => {
                 <VideoIntro></VideoIntro>
             </section>
             {/* ends */}
-            
+
             <section>
                 <Curses></Curses>
             </section>

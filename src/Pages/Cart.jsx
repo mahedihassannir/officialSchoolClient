@@ -6,13 +6,16 @@ import { RxCross1 } from "react-icons/rx";
 import { FcViewDetails } from "react-icons/fc";
 import Swal from "sweetalert2";
 
+// cons
+import { TbCurrencyTaka } from "react-icons/tb"; //// cons
+// cons
 
 const Cart = () => {
 
 
 
     const [cart, refetch] = useCart()
-  
+
 
     // here is the delete method
     const handleDeleteCart = (id) => {
@@ -21,7 +24,7 @@ const Cart = () => {
         })
             .then(res => res.json())
             .then(info => {
-            
+
                 if (info.deletedCount > 0) {
 
                     Swal.fire({
@@ -38,11 +41,23 @@ const Cart = () => {
             })
     }
 
+    // total price
+
+
+    const total = cart.reduce((sum, item) => item.price + sum, 0)
+
+    const final = parseFloat(total).toFixed(2)
+
+
+
 
     return (
         <div className="py-4 w-full h-screen">
 
-            <h1 className="text-2xl">total:</h1>
+            <h1 className=" flex items-center gap-2 text-2xl pb-2 text-gray-500">মোট :<span className="  text-red-500 flex items-center font-semibold font-mono pr-2 ">
+                <TbCurrencyTaka></TbCurrencyTaka>
+                {final}
+            </span> টাকা</h1>
             {/* ends */}
             <div className="flex">
                 <div className="overflow-x-auto ">

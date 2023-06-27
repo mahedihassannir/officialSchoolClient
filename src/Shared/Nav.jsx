@@ -24,13 +24,13 @@ const Nav = () => {
 
     // ends
 
-  
+
 
     const handleLogout = () => {
         Logout()
             .then(res => {
                 const user = res.user
-                
+
 
                 // if()
 
@@ -45,8 +45,9 @@ const Nav = () => {
     // const darkmode = document.getElementById("dakmmode")
 
 
+    const total = cart.reduce((sum, item) => item.price + sum, 0)
 
-
+    const final = parseFloat(total).toFixed(2)
 
 
     return (
@@ -89,10 +90,13 @@ const Nav = () => {
                             </label>
                             <div tabIndex={0} className="mt-3 card card-compact dropdown-content w-52 bg-base-100 shadow">
                                 <div className="card-body">
-                                    <span className="font-bold text-lg">{cart.length || 0} Items</span>
-                                    <span className="text-info">Subtotal: $999</span>
-                                    <Link to="/cart" className="card-actions">
+                                    <span className="font-bold text-lg">{cart.length || 0} টি পণ্য</span>
+                                    <span className="text-red-600 text-lg">মোট: ${final} টাকা</span>
+                                    <Link to="/cart" className="card-actions ">
                                         <button className="btn btn-primary btn-block">View cart</button>
+                                        <p className="text-center">কার্ট দেখুন</p>
+                                        {/* <button className="btn btn-primary btn-block opacity-0 hover:opacity-100">কার্ট দেখুন</button>
+                                         */}
                                     </Link>
                                 </div>
                             </div>

@@ -75,6 +75,7 @@ import AnnountsMent from "../Pages/AnnountsMent";
 import Postinfo from "../Components/SocialMediaCompos/Postinfo";
 import DetailEvent from "../Pages/DetailEvent";
 import RegisterInSchool from "../Pages/RegisterInSchool";
+import MainHome from "../DashBoard/Adminpages/MainHome";
 
 //ends of the routs import
 
@@ -187,6 +188,11 @@ const router = createBrowserRouter(
                 <DashBoardManage></DashBoardManage>
             </PrivateRoute>,
             children: [
+                // {
+                //     path: "/",
+                //     element: <MainHome></MainHome>
+                // },
+
                 {
                     path: "userHoeme",
                     element: <UserHone></UserHone>
