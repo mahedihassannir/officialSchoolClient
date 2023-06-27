@@ -63,6 +63,7 @@ const AuProvider = ({ children }) => {
             console.log(watch);
             Setuser(watch)
             // loader false to stop loading when the loaded done
+
             SetLoader(false)
 
 
@@ -73,6 +74,7 @@ const AuProvider = ({ children }) => {
                     .then(data => {
                         // console.log("token", data.data.token);
                         localStorage.setItem("jwtToken", data.data.token)
+
                     })
             }
             else {

@@ -19,14 +19,18 @@ const ALLUser = () => {
 
 
 
-    const {user}=useContext(ContexM)
+    const { user } = useContext(ContexM)
 
     // query 
-
+    const token = localStorage.getItem('jwtToken');
 
     const { data: users = [], refetch } = useQuery(['user'], async () => {
 
-        const res = await fetch('http://localhost:5000/user')
+        const res = await fetch('http://localhost:5000/user', {
+
+            headers: { authorization: `Bearer ${token}` }
+
+        })
         return res.json()
 
     })

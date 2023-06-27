@@ -6,7 +6,7 @@ import useAxiosSecure from "./useAxiosSecure";
 
 
 const useCart = () => {
-    const { user } = useContext(ContexM);
+    const { user,loader } = useContext(ContexM);
 
     // const token = localStorage.getItem("jwtToken")
 
@@ -15,10 +15,13 @@ const useCart = () => {
     console.log({ axiosSecure });
 
     const token = localStorage.getItem('jwtToken');
+
     const { refetch, data: cart = [] } = useQuery({
 
         queryKey: ['cart', user?.email],
-        enabled: !!user?.email,
+
+        enabled: !loader,
+
 
         // queryFn: async () => {
         //     const res = await fetch(`http://localhost:5000/carts?email=${user?.email}`, {
