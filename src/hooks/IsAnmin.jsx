@@ -7,8 +7,6 @@ const IsAnmin = () => {
 
     const { user } = useContext(ContexM)
 
-    console.log({ user });
-
     const [axiosSecure] = useAxiosSecure()
 
     const { data: isAdmin ,isLoading:isAdminLoding} = useQuery({
@@ -21,7 +19,6 @@ const IsAnmin = () => {
 
             const res = await axiosSecure.get(`user/admin/${user.email}`);
 
-            console.log(res, 'admin email ');
             return res.data.admin
         }
 

@@ -8,14 +8,15 @@ const Register = () => {
 
     // here is the contex provider create contex 
 
-    const { creareUser } = useContext(ContexM)
+    const { creareUser, UpdateUser } = useContext(ContexM)
 
 
     const ImageRef = useRef(null)
 
-    // this is image hosting url
-    const uploadUrl = `https://api.imgbb.com/1/upload?key=ab19e4cb2cdbd9eef876755bbb698633`
+    const key = `890b5ec0923fcc8472f7e690406adc40`
 
+    // const uploadUrl = `https://api.imgbb.com/1/upload?key=${key}`
+    const uploadUrl = `https://api.imgbb.com/1/upload?key=${key}`
 
 
 
@@ -32,68 +33,83 @@ const Register = () => {
         const email = from.email.value
         const password = from.password.value
 
+      
+        const file = ImageRef.current.files[0]
+        
 
-        const imageDetailes = ImageRef.current.files[0]
+        const Imagedaat = new FormData()
 
-        const packetOFImage = new FormData()
-        packetOFImage.append("image", imageDetailes)
+        Imagedaat.append('image', file)
 
+        fetch(uploadUrl, {
+            method: "POST",
+            body: Imagedaat
+        })
+            .then(res => res.json())
+            .then(data => {
 
-
-
-        creareUser(email, password)
-            .then(res => {
-                const user = res.user
-
-                console.log({ emailform: user.email });
-
-                const totalinfo = { email: user.email, name: user.displayName, photo: user.photoURL, provider: user.providerId }
-
-                console.log(totalinfo);
-
-                // here is teh image upload system 
-
-                fetch(`http://localhost:5000/users`, {
-                    method: 'POST',
-                    headers: {
-                        "Content-type": "application/json"
-                    },
-                    body: JSON.stringify( totalinfo )
-                })
-
-                    .then(res => res.json())
-                    .then(data => {
-                        console.log(data);
-                    })
+                const image = data.data.display_url
 
 
-                if (user.email) {
-                    Swal.fire({
-                        position: 'top-end',
-                        icon: 'success',
-                        title: `account create successfully`,
-                        showConfirmButton: false,
-                        timer: 1500
-                    })
+               
 
-                    fetch(uploadUrl, {
-                        method: "POST",
-                        body: packetOFImage
-                    })
-                        .then(res => res.json())
-                        .then(data => {
 
-                            // console.log(data);
+                creareUser(email, password)
+                    .then(res => {
+                        const user = res.user
 
+                        console.log(user.displayName);
+                        
+
+                        const userinfo = { name: name, email: user.email, photo: data.data.display_url, password: password, id: user._id, emailVerified: user.emailVerified, anonimus: user.isAnonymous, }
+
+
+                        Swal.fire({
+                            position: 'top-end',
+                            icon: 'success',
+                            title: `account create successfully`,
+                            showConfirmButton: false,
+                            timer: 1500
                         })
-                }
-                naviage("/")
+
+                        console.log(user, "line 72");
+
+                        UpdateUser(name, image)
+                            .then(() => {
+                                console.log("user profile Updated");
+                            })
+                            .catch(err => {
+                                console.log(err);
+                            })
+
+
+
+
+
+
+
+                        fetch(`http://localhost:5000/users`, {
+                            method: "POST",
+                            headers: {
+                                "content-type": "application/json"
+                            },
+                            body: JSON.stringify(userinfo)
+                        })
+                            .then(res => res.json())
+                            .then(data => {
+                                console.log("db info", data);
+                            })
+
+
+                        naviage("/")
+                    })
+                    .catch(err => {
+                        console.log(err);
+                    })
+
+
 
             })
-            .catch(err => {
-                console.log(err);
-            })
-
 
 
     }
@@ -157,7 +173,7 @@ const Register = () => {
                             <div>
 
 
-                                <input ref={ImageRef} type="file" placeholder="Name" className=" opacity-60 cursor-pointer  input input-bordered mt-1 input-primary w-full max-w-xs" />
+                                <input required ref={ImageRef} type="file" placeholder="Name" className=" opacity-60 cursor-pointer  input input-bordered mt-1 input-primary w-full max-w-xs" />
 
                             </div>
 

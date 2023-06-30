@@ -76,6 +76,7 @@ import Postinfo from "../Components/SocialMediaCompos/Postinfo";
 import DetailEvent from "../Pages/DetailEvent";
 import RegisterInSchool from "../Pages/RegisterInSchool";
 import MainHome from "../DashBoard/Adminpages/MainHome";
+import AdminOnly from "../Private/AdminOnly";
 
 //ends of the routs import
 
@@ -195,16 +196,16 @@ const router = createBrowserRouter(
 
                 {
                     path: "userHoeme",
-                    element: <UserHone></UserHone>
+                    element: <PrivateRoute><UserHone></UserHone></PrivateRoute>
                 },
 
                 {
                     path: "adminHome",
-                    element: <AdminHome></AdminHome>
+                    element: <AdminOnly><AdminHome></AdminHome></AdminOnly>
                 },
                 {
                     path: "AddBlogs",
-                    element: <AddBlogs></AddBlogs>
+                    element: <AdminOnly><AddBlogs></AddBlogs></AdminOnly>
                 },
                 {
                     path: "ALLEvents",
@@ -216,19 +217,19 @@ const router = createBrowserRouter(
                 },
                 {
                     path: "addTeachers",
-                    element: <AddTeachers></AddTeachers>
+                    element: <AdminOnly><AddTeachers></AddTeachers></AdminOnly>
                 },
                 {
                     path: "addevent",
-                    element: <Addevent></Addevent>
+                    element: <AdminOnly><Addevent></Addevent></AdminOnly>
                 },
                 {
                     path: "aDDFood",
-                    element: <ADDFood></ADDFood>
+                    element: <AdminOnly><ADDFood></ADDFood></AdminOnly>
                 },
                 {
                     path: "ADDblog",
-                    element: <ADDblog></ADDblog>
+                    element: <AdminOnly></AdminOnly>
                 },
                 {
                     path: "ALLFood",
@@ -240,7 +241,7 @@ const router = createBrowserRouter(
                 },
                 {
                     path: "aLLUser",
-                    element: <ALLUser></ALLUser>
+                    element: <AdminOnly><ALLUser></ALLUser></AdminOnly>
                 },
                 {
                     path: "books",

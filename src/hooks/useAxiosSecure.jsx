@@ -19,7 +19,6 @@ const useAxiosSecure = () => {
 
       const token = localStorage.getItem('jwtToken');
 
-      console.log({ token });
 
       if (token) {
 

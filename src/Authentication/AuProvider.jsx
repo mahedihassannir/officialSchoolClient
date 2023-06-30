@@ -1,6 +1,6 @@
 
 
-import { GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from 'firebase/auth'
+import { GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from 'firebase/auth'
 import app from './firebase';
 import { createContext } from 'react';
 import { useState } from 'react';
@@ -60,12 +60,11 @@ const AuProvider = ({ children }) => {
     useEffect(() => {
 
         const off = onAuthStateChanged(auth, watch => {
-            console.log(watch);
+            // console.log(watch);
             Setuser(watch)
             // loader false to stop loading when the loaded done
 
             SetLoader(false)
-
 
 
             if (watch) {
@@ -91,11 +90,17 @@ const AuProvider = ({ children }) => {
     // ends
 
 
-
+    // user profile update
+    const UpdateUser = (name, image) => {
+        return updateProfile(auth.currentUser, {
+            displayName: name, photoURL: image
+        })
+    }
 
 
     const userInfos = {
         user,
+        UpdateUser,
         creareUser,
         singinUser,
         Logout,

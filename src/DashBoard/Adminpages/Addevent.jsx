@@ -1,8 +1,11 @@
 
+import '../../ExtraCss/bg.css'
+
 const Addevent = () => {
     return (
-        <div>
+        <div className='bg2'>
             
+
         </div>
     );
 };

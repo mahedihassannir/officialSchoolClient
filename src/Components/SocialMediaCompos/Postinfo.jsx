@@ -1,14 +1,21 @@
+
+
+import { useContext } from "react";
 import { useRef } from "react";
+import { useNavigate } from "react-router-dom";
+import { ContexM } from "../../Authentication/AuProvider";
 
 
-const key = `0f4aa5e4abaf119c694fb653f9d54503`
+const key = `890b5ec0923fcc8472f7e690406adc40`
 // making upload photo in the photo storage 
-const imgbbuploadUrl = `https://api.imgbb.com/1/upload?expiration=600&key=${key}`  // making upload photo in the photo storage  ends
-
+const uploadUrl = `https://api.imgbb.com/1/upload?key=${key}`
 
 
 const Postinfo = () => {
 
+    const { user } = useContext(ContexM)
+
+    const navigate = useNavigate()
 
     // img graping
 
@@ -18,16 +25,6 @@ const Postinfo = () => {
 
 
 
-    const file = imageRef.current.files[0]
-    
-
-    // pacate for image
-
-
-    const imgdetailes = new FormData()
-
-    imgdetailes.append('img', file)
-
 
 
     // handle the posting in the server 
@@ -35,27 +32,48 @@ const Postinfo = () => {
         e.preventDefault()
 
         const from = e.target
-
-        // imgge upload related work 
-
-
-
-
-
         const title = from.title.value
         const description = from.description.value
 
-        const infos = { title, description }
-       
+        // pacate for image
+
+        const file = imageRef.current.files[0]
 
 
-        fetch(imgbbuploadUrl, {
+        const Imagedaat = new FormData()
+
+        Imagedaat.append('image', file)
+
+
+
+        fetch(uploadUrl, {
             method: "POST",
-            body: imgdetailes
+            body: Imagedaat
         })
             .then(res => res.json())
             .then(data => {
-               
+
+                console.log(data);
+
+                fetch('http://localhost:5000/socialpost', {
+                    method: "POST",
+                    headers: {
+                        "content-type": "application/json"
+                    },
+                    body: JSON.stringify({ title, description, img: data?.data?.display_url, email: user.email, name: user.displayName, profilePhoto: user.photoURL })
+
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+
+                        if (data.insertedId) {
+                            alert("post done")
+                        }
+                        navigate("/social")
+                    })
+
+
             })
 
 
@@ -64,8 +82,17 @@ const Postinfo = () => {
 
     }
 
+
+
+
+
+
+
+
     return (
         <div className="w-full pb-20 flex justify-center items-center ">
+
+
             <form onSubmit={handlePost} className="w-1/2 mx-auto">
                 <div>
                     <input name="title" type="text" className=" pl-2 border-2  w-11/12 py-3 rounded-md " placeholder="Title" />
@@ -90,6 +117,8 @@ const Postinfo = () => {
                 </div>
 
             </form>
+
+
         </div>
     );
 };

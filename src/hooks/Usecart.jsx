@@ -12,7 +12,6 @@ const useCart = () => {
 
     const [axiosSecure] = useAxiosSecure()
 
-    console.log({ axiosSecure });
 
     const token = localStorage.getItem('jwtToken');
 
@@ -33,7 +32,7 @@ const useCart = () => {
 
         queryFn: async () => {
             const res = await axiosSecure(`/carts?email=${user?.email}`)
-            console.log(`res from axios`, res);
+    
             
             return res.data;
 
