@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { ContexM } from "../../Authentication/AuProvider";
 import { MdAdminPanelSettings, MdEvent, MdOutlineEventAvailable } from "react-icons/md";
-import { FaCandyCane, FaChalkboardTeacher, FaGlassMartiniAlt, FaHome, FaNetworkWired, FaReact, FaStoreAlt, FaStoreAltSlash, FaUser } from "react-icons/fa";
+import { FaBlog, FaCandyCane, FaChalkboardTeacher, FaGlassMartiniAlt, FaHome, FaNetworkWired, FaReact, FaStoreAlt, FaStoreAltSlash, FaUser } from "react-icons/fa";
 import IsAnmin from "../../hooks/IsAnmin";
 import { BsBookFill } from "react-icons/bs";
 
@@ -61,16 +61,26 @@ const Sidebar = () => {
                     {/*admin panel functionality   */}
                     {isAdmin ? <>
 
-                        <Link className="text-lg py-2 flex items-center gap-2 " to="/Dashboard/adminHome"> <MdAdminPanelSettings></MdAdminPanelSettings> Admin</Link>
-
+                        <Link className="text-lg py-2 flex items-center gap-2 " to="/Dashboard/adminHome"> <MdAdminPanelSettings></MdAdminPanelSettings> <FaHome></FaHome> Admin Home</Link>
+                        <hr />
                         <Link className=" py-2 text-lg flex items-center gap-2 " to="/Dashboard/addevent"> <MdEvent></MdEvent> add
                             event</Link>
 
                         <Link className="text-lg py-2 flex items-center gap-2 " to="/Dashboard/addTeachers"> <FaChalkboardTeacher></FaChalkboardTeacher>add teachers</Link>
-                        <Link className="text-lg py-2 flex items-center gap-2 " to="/Dashboard/aLLUser"> <FaUser></FaUser>all user</Link>
-
 
                         <Link className="text-lg py-2 flex items-center gap-2" to="/Dashboard/aDDFood"> <FaGlassMartiniAlt></FaGlassMartiniAlt>add Food</Link>
+
+                        <Link className="text-lg py-2 flex items-center gap-2" to="/Dashboard/AddBlogs"> <FaBlog></FaBlog>add Blog</Link>
+
+                        <hr />
+                        <Link className="text-lg py-2 flex items-center gap-2 " to="/Dashboard/aLLTeachers"> <FaUser className="text-blue-400"></FaUser>all Teachers</Link>
+
+                        <Link className="text-lg py-2 flex items-center gap-2 " to="/Dashboard/aLLUser"> <FaUser className="text-red-400"></FaUser>all user</Link>
+
+                        <Link className="text-lg py-2 flex items-center gap-2 " to="/Dashboard/ALLblogs"> <FaBlog className="text-green-400"></FaBlog>AllBlogs</Link>
+
+
+
 
                         <hr />
 
@@ -78,13 +88,13 @@ const Sidebar = () => {
 
                         <Link className="text-lg py-2 flex items-center gap-2 " to="/Food"> <FaStoreAlt></FaStoreAlt>
 
-                            Main                        food
+                            Main   food
                         </Link>
 
                         <Link className="text-lg py-2 flex items-center gap-2 " to="/OurTeachers"> <FaChalkboardTeacher></FaChalkboardTeacher>teachers</Link>
 
 
-                        <Link className="text-lg py-2 flex items-center gap-2" to="/social"> <FaNetworkWired></FaNetworkWired>social</Link>
+                        <Link className="text-lg py-2 flex items-center gap-2 " to="/social"> <FaNetworkWired></FaNetworkWired>social</Link>
 
 
 

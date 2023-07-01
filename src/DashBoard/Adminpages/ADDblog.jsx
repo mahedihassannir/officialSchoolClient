@@ -1,7 +1,11 @@
+
+// css
+import '../../ExtraCss/bg.css'
 const ADDblog = () => {
+
     return (
-        <div>
-            
+        <div className='bg2'>
+
         </div>
     );
 };

@@ -7,7 +7,7 @@ const ADDFood = () => {
     return (
         <div className="w-full px-2 h-screen  bg2  ">
 
-
+            <h1 className='text-center text-3xl font-bold text-[#db87f0] mt-10'>Add Food section </h1>
             <form className="flex mt-16 ml-10 gap-2">
                 <div className="w-1/2 py-2 pl-2  rounded-lg  bg-teal-800">
 
