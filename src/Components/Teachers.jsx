@@ -24,7 +24,7 @@ const Teachers = () => {
 
                     </div>
                 </div>
-                <div className="w-[300px] h-[300px]  rounded-lg border-2">
+                <div className="w-[300px] h-[200px]  rounded-lg border-2">
                     <div className="">
                         <img className="w-full h-[230px p-2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsmGFRI_sEYgHk4N9uCQ4XL-K-3ttOy-VnXwAjB-SDC-SbXAZCm4JygIZXroYF5vxHVCk&usqp=CAU" alt="" />
                     </div>

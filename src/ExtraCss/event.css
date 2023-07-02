@@ -9,6 +9,24 @@
   border: none;
   border-radius: 5px;
 }
+#btn2 {
+  background: linear-gradient(to right, #db87f0, #340e8d);
+  /* Use linear-gradient() to create a horizontal gradient
+       from red (#ff0000) to green (#00ff00) */
+
+  /* Add other styling properties as desired */
+  color: #ffffff;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 5px;
+  color: wheat;
+  font-weight: bold;
+}
+#btn2:hover {
+
+  color: white;
+  
+}
 
 /* profile */
 
@@ -31,17 +49,14 @@
 }
 
 .profileBanner:hover {
-
   /* animation-duration: 2s; */
   cursor: pointer;
   height: 600px;
   transition-delay: 500ms;
-  
-
 }
 
 /* principal img */
 
-.radd{
+.radd {
   border-radius: 140px;
 }

@@ -11,7 +11,7 @@ import '../ExtraCss/event.css'
 const DetailEvent = () => {
 
     const data = useLoaderData()
-   
+
 
     // in this data ki ki ase event ee ta oo bose jabe video er section eee
 
@@ -26,20 +26,35 @@ const DetailEvent = () => {
                     <img className="w-11/12 mx-auto border-2 p-2 rounded-md border-[#db87f0]" src={data.image} alt="" />
 
                     {/* des */}
+                    <div className="ml-20  my-2">
+
+                        <h1 className="text-lg font-semibold">Event Details</h1>
+                    </div>
+                    <hr />
                     <div className="w-11/12 mx-auto mt-4 ">
                         <p>description : {data.description}</p>
+                        {/* why this event */}
+                        <div className="">
+                            <p></p>
+                        </div>
+                        {/* time */}
+                        <div className="">
+                            <p>
+
+                            </p>
+                        </div>
 
                     </div>
 
                 </div>
-                <div className="  ml-2 py-3">
+                <div className="   ml-2 py-3">
 
                     <div className="">
                         <div className=" border-2 p-3 rounded-md border-[#db87f0] ">
 
                             <div>
                                 {/* i frame also dynamic */}
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/wWQAN7bBlI8" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                <iframe className="rounded-md" width="560" height="315" src="https://www.youtube.com/embed/wWQAN7bBlI8" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 
                             </div>
@@ -49,32 +64,55 @@ const DetailEvent = () => {
 
 
                                     <p className="text-lg">
-                                        guest name :
+                                        inestracture name : Mahedi Hassan
+
                                     </p>
                                     {/*  */}
 
                                     <p className=" leading-9 py-2 text-lg">
-                                        <span className="text-[#cf62eb]">Description</span> : {data.description}
+                                        <p className="text-2xl font-semibold">how to be a programmer in 6 month</p>
                                     </p>
 
                                     <hr className="py-2" />
 
                                     {/*sites  */}
                                     <p className="text-lg">
-                                        sites : 1000 //${data.sites}
+                                        course fee : $1000
                                     </p>
+                                    {/* facilites section */}
+                                    <div className="">
+                                        <h1 className="text-lg font-bold pl-4">Facelites</h1>
+                                        <hr />
+                                    </div>
+                                    <div className="grid grid-cols-3 my-4 gap-2">
 
-                                    {/*token  */}
-                                    <p className="text-lg">
+                                        {/*token  */}
+                                        <div className="">
+                                            <p>course fee : $1000</p>
+                                            <p>course fee : $1000</p>
+                                            <p>course fee : $1000</p>
 
-                                        food :token //${data.token} to get food in event 
+                                        </div>
+                                        <div className="">
+                                            <p>course fee : $1000</p>
+                                            <p>course fee : $1000</p>
+                                            <p>course fee : $1000</p>
 
-                                    </p>
+                                        </div>
+
+                                        <div className="">
+                                            <p>course fee : $1000</p>
+                                            <p>course fee : $1000</p>
+                                            <p>course fee : $1000</p>
+
+                                        </div>
+
+                                    </div>
                                     {/*  */}
                                     {/* btn div */}
                                     <div className="text-center py-2">
 
-                                        <button id="btn">Intarested</button>
+                                        <button id="btn">Inroll Now</button>
                                     </div>
 
                                 </div>
