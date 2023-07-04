@@ -41,7 +41,7 @@ const DetailEvent = () => {
                         <div className="">
                             <p>
 
-                            </p>
+                            </p>    
                         </div>
 
                     </div>

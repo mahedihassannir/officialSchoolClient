@@ -10,11 +10,11 @@ const Events = () => {
 
 
     // for (let img of data) {
-      
+
     // }
 
     const [isAdmin] = IsAnmin()
-    
+
 
     return (
         <div className="w-full pb-10 ">

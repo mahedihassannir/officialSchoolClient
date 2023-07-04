@@ -27,7 +27,7 @@ const FoodSingle = ({ data }) => {
 
         const product = { name: item.name, price: item.price, category: item.category, email: user.email, id: item.id, image: item.image, recipy: item.recipy }
 
-       
+
 
         fetch(`http://localhost:5000/carts`, {
             method: "POST",
@@ -38,7 +38,7 @@ const FoodSingle = ({ data }) => {
         })
             .then(res => res.json())
             .then(data => {
-                
+
 
                 if (data.insertedId) {
                     // alert("add to cart done")
@@ -90,8 +90,11 @@ const FoodSingle = ({ data }) => {
 
                     </div>
 
-                    <button disabled={user?"":disableBtn} onClick={() => addCart(data)} className="btn hover:text-[#340e8d]  hover:bg-[#db87f0] ">Book now</button>
+                    <div className="text-center">
 
+                        <button disabled={user ? "" : disableBtn} onClick={() => addCart(data)} className="btn hover:text-[#340e8d]  hover:bg-[#db87f0] ">Book now</button>
+
+                    </div>
 
                 </div>
 
