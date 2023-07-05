@@ -20,10 +20,10 @@ const DetailEvent = () => {
 
     return (
         <div className="w-11/12 mx-auto h-screen my-3 ">
-            <div className="fr">
+            <div className="flex">
                 <div className="py-3">
 
-                    <img className="w-11/12 mx-auto border-2 p-2 rounded-md border-[#db87f0]" src={data.image} alt="" />
+                    <img className=" border-2 p-2 rounded-md border-[#db87f0]" src={data.image} alt="" />
 
                     {/* des */}
                     <div className="ml-20  my-2">
@@ -41,7 +41,7 @@ const DetailEvent = () => {
                         <div className="">
                             <p>
 
-                            </p>    
+                            </p>
                         </div>
 
                     </div>

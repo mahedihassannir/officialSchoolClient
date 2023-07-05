@@ -92,7 +92,7 @@ const AddTeachers = () => {
     return (
         <div className="bg2">
 
-            <h1 className='text-center text-3xl font-bold text-[#db87f0] mt-10'>Add teacher section </h1>
+            <h1 className='text-center text-3xl font-bold text-[#db87f0] mt-10'>Add teacher section <span className='text-red-400'>complete</span> </h1>
 
 
             <form onSubmit={handleFrom} className="flex mt-16 ml-10 gap-2">

@@ -29,11 +29,11 @@ const Events = () => {
 
                 {
                     data.map(res => <div key={res._id}>
-                        <div className="w-[400px] h-[400px] border-2 ">
+                        <div className="w-[400px] h-[400px] border-2 rounded-md ">
 
 
                             <div className="w-full ">
-                                <img src={res.image} className="w-full h-[250px]" alt="" />
+                                <img src={res.image} className="p-1 w-full h-[250px]" alt="" />
 
                             </div>
 
