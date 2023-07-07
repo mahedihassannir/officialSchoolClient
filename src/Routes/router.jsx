@@ -78,6 +78,7 @@ import RegisterInSchool from "../Pages/RegisterInSchool";
 import MainHome from "../DashBoard/Adminpages/MainHome";
 import AdminOnly from "../Private/AdminOnly";
 import AllBlogs from "../DashBoard/Adminpages/AllBlogs";
+import Addannouncement from "../DashBoard/Adminpages/Addannouncement";
 
 //ends of the routs import
 
@@ -209,6 +210,10 @@ const router = createBrowserRouter(
                     element: <AdminOnly><AddBlogs></AddBlogs></AdminOnly>
                 },
                 {
+                    path: "addannouncement",
+                    element: <AdminOnly><Addannouncement></Addannouncement></AdminOnly>
+                },
+                {
                     path: "ALLEvents",
                     element: <ALLEvents></ALLEvents>
                 },
@@ -237,7 +242,7 @@ const router = createBrowserRouter(
                     path: "ALLFood",
                     element: <ALLFood></ALLFood>
                 },
-                
+
                 {
                     path: "ALLblogs",
                     element: <AllBlogs></AllBlogs>

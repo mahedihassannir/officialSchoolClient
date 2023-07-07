@@ -9,11 +9,11 @@ const PostTedCardCompos = () => {
     const [isAdmin] = IsAnmin()
     // const isAdmin=
 
-    
+
 
     const [posts, SetPost] = useState([])
 
-    
+
     useEffect(() => {
 
         fetch('http://localhost:5000/allpost')
@@ -23,12 +23,12 @@ const PostTedCardCompos = () => {
 
     }, [])
 
-// console.log(posts);
+    // console.log(posts);
 
     return (
         <div className="grid gap-4">
 
-
+            
             {
                 posts.map(res => <section key={res._id}>
 
@@ -47,7 +47,7 @@ const PostTedCardCompos = () => {
                             <div className="pl-4">
                                 <h5>{res.name}</h5>
                                 <p>Follow</p>
-                                
+
                             </div>
 
                         </div>

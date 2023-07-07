@@ -19,7 +19,7 @@ const DetailEvent = () => {
 
 
     return (
-        <div className="w-11/12 mx-auto h-screen my-3 ">
+        <div className="w-11/12 mx-auto pb-20 my-3 ">
             <div className="flex">
                 <div className="py-3">
 

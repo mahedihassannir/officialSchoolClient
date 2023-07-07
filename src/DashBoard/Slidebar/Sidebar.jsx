@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { ContexM } from "../../Authentication/AuProvider";
 import { MdAdminPanelSettings, MdEvent, MdOutlineEventAvailable } from "react-icons/md";
-import { FaBlog, FaCandyCane, FaChalkboardTeacher, FaDiscourse, FaGlassMartiniAlt, FaHome, FaNetworkWired, FaReact, FaStoreAlt, FaStoreAltSlash, FaUser } from "react-icons/fa";
+import { FaBlog, FaCandyCane, FaChalkboardTeacher, FaDiscourse, FaGlassMartiniAlt, FaHome, FaMicrophoneAlt, FaNetworkWired, FaReact, FaStoreAlt, FaStoreAltSlash, FaUser } from "react-icons/fa";
 import IsAnmin from "../../hooks/IsAnmin";
 import { BsBookFill } from "react-icons/bs";
 
@@ -66,17 +66,19 @@ const Sidebar = () => {
 
                         <Link className="hover:text-red-400 py-2 text-lg flex items-center gap-2 " to="/Dashboard/addevent"> <FaDiscourse></FaDiscourse> add
                             Course</Link>
-                            {/* course end */}
-                            <hr />
+                        {/* course end */}
+                        <hr />
                         <Link className="hover:text-blue-600 py-2 text-lg flex items-center gap-2 " to="/Dashboard/addevent"> <MdEvent></MdEvent> add
                             event</Link>
-                            
+
 
                         <Link className=" hover:text-blue-600 text-lg py-2 flex items-center gap-2 " to="/Dashboard/addTeachers"> <FaChalkboardTeacher></FaChalkboardTeacher>add teachers</Link>
 
                         <Link className="text-lg py-2 flex items-center gap-2 hover:text-blue-600" to="/Dashboard/aDDFood"> <FaGlassMartiniAlt></FaGlassMartiniAlt>add Food</Link>
 
                         <Link className="text-lg py-2 flex items-center gap-2 hover:text-blue-600" to="/Dashboard/AddBlogs"> <FaBlog></FaBlog>add Blog</Link>
+
+                        <Link className="text-lg py-2 flex items-center gap-2 hover:text-blue-600" to="/Dashboard/addannouncement"> <FaMicrophoneAlt></FaMicrophoneAlt>add Announcment</Link>
 
                         <hr />
                         <Link className="text-lg py-2 flex items-center gap-2 hover:text-blue-600" to="/Dashboard/aLLTeachers"> <FaUser className="text-blue-400"></FaUser>all Teachers</Link>
@@ -102,6 +104,10 @@ const Sidebar = () => {
 
                         <Link className="text-lg py-2 flex items-center gap-2 hover:text-blue-600" to="/social"> <FaNetworkWired></FaNetworkWired>social</Link>
 
+                        <Link className=" text-lg py-2 flex items-center gap-2 hover:text-blue-600" to="/social " to="/notify" >
+
+                            <FaCandyCane></FaCandyCane>Announcment</Link>
+
 
 
 
@@ -112,7 +118,9 @@ const Sidebar = () => {
                                 <FaHome></FaHome>
                                 student Home</Link>
 
-                            <Link className=" hover:border-2 hover:rounded-md hover:border-[#db87f0] py-3 px-7  text-lg hover:text-[#8d0e74] flex items-center gap-2 " to="/Food"><FaStoreAltSlash></FaStoreAltSlash> Food Store</Link>
+
+
+
 
                             <Link className=" hover:border-2 hover:rounded-md hover:border-[#db87f0] text-lg py-3 px-7  hover:text-[#8d0e74] flex items-center gap-2 " to="/Dashboard/result" >
                                 <FaReact></FaReact>
@@ -126,13 +134,19 @@ const Sidebar = () => {
 
                             <hr />
 
+                            <Link className=" hover:border-2 hover:rounded-md hover:border-[#db87f0] text-lg py-3 px-7  hover:text-[#8d0e74] flex items-center gap-2 " to='/' >
+                                <FaHome></FaHome>Home</Link>
+
+                            <Link className=" hover:border-2 hover:rounded-md hover:border-[#db87f0] py-3 px-7  text-lg hover:text-[#8d0e74] flex items-center gap-2 " to="/Food"><FaStoreAltSlash></FaStoreAltSlash> Food Store</Link>
+
+                            <Link className=" hover:border-2 hover:rounded-md hover:border-[#db87f0] text-lg py-3 px-7  hover:text-[#8d0e74] flex items-center gap-2 " to='/events' >
+
+
+
+                                <MdOutlineEventAvailable></MdOutlineEventAvailable>events</Link>
                             <Link className=" hover:border-2 hover:rounded-md hover:border-[#db87f0] text-lg py-3 px-7  hover:text-[#8d0e74] flex items-center gap-2 " to="/notify" >
 
                                 <FaCandyCane></FaCandyCane>Announcment</Link>
-                            <Link className=" hover:border-2 hover:rounded-md hover:border-[#db87f0] text-lg py-3 px-7  hover:text-[#8d0e74] flex items-center gap-2 " to='/' >
-                                <FaHome></FaHome>Home</Link>
-                            <Link className=" hover:border-2 hover:rounded-md hover:border-[#db87f0] text-lg py-3 px-7  hover:text-[#8d0e74] flex items-center gap-2 " to='/events' >
-                                <MdOutlineEventAvailable></MdOutlineEventAvailable>events</Link>
 
                         </>
                     }

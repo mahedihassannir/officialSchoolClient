@@ -3,6 +3,7 @@ import { Link, useLoaderData } from "react-router-dom";
 // css from extra css
 import '../ExtraCss/event.css'
 import IsAnmin from "../hooks/IsAnmin";
+import Swal from "sweetalert2";
 
 const Events = () => {
 
@@ -14,6 +15,43 @@ const Events = () => {
     // }
 
     const [isAdmin] = IsAnmin()
+
+    const handleDeleteevent = (id) => {
+        console.log({ id });
+        if (isAdmin) {
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You won't be able to revert this!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, delete it!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+
+                    fetch(`http://localhost:5000/eventdelete/${id}`, {
+                        method: "DELETE"
+                    })
+                        .then(res => res.json())
+                        .then(data => {
+                            console.log(data);
+
+                            if (data.deletedCount > 0) {
+
+                                Swal.fire(
+                                    'Deleted!',
+                                    'Your file has been deleted.',
+                                    'success'
+                                )
+                            }
+                        })
+                }
+            })
+        }
+
+
+    }
 
 
     return (
@@ -57,7 +95,7 @@ const Events = () => {
                                     {
                                         isAdmin &&
                                         <div className="pt-5 pl-3">
-                                            <button id="btn" className="">
+                                            <button onClick={() => handleDeleteevent(res._id)} id="btn" className="">
                                                 delete
                                             </button>
                                         </div>

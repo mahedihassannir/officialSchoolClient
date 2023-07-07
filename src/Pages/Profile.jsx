@@ -68,25 +68,15 @@ const Profile = () => {
 
                 </div>
 
+                {/* bio */}
+
+
                 <div className="profile">
+                    {/* your added product  */}
                     <div className=" pl-2 pt-2 border-2 h-[500px] rounded-md  mt-5">
                         <div className="">
 
-                            <div className="flex gap-3 items-center">
-                                <img className="w-[40] border-2  hover:border-[#db87f0] h-[40px] rounded
-                                " src={user?.photoURL} alt="" />
-                                {/* name */}
-                                <h4 className="text-lg font-bold">Namme : {user.displayName} </h4>
-                            </div>
-                            <div className="pt-3">
-                                <p className="text-lg font-semibold">email: {user.email}</p>
-                            </div>
 
-                            <div className="text-lg">
-                                <div className="font-semibold pt-2">Add bio</div>
-                                <div className="font-semibold pt-2">About Your self</div>
-                                <div className="font-semibold pt-2">Hobis</div>
-                            </div>
                         </div>
 
                     </div>

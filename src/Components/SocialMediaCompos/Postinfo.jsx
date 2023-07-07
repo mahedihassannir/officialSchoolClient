@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { ContexM } from "../../Authentication/AuProvider";
+import Swal from "sweetalert2";
 
 
 const key = `890b5ec0923fcc8472f7e690406adc40`
@@ -68,7 +69,16 @@ const Postinfo = () => {
                         console.log(data);
 
                         if (data.insertedId) {
-                            alert("post done")
+
+                            Swal.fire({
+                                position: 'top-end',
+                                icon: 'success',
+                                title: 'Your work has been saved',
+                                showConfirmButton: false,
+                                timer: 1500
+                            })
+
+
                         }
                         navigate("/social")
                     })
