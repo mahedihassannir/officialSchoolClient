@@ -50,8 +50,6 @@ import Addevent from "../DashBoard/Adminpages/Addevent";
 
 import ADDFood from "../DashBoard/Adminpages/ADDFood";
 
-import ADDblog from "../DashBoard/Adminpages/ADDblog";
-
 import ALLFood from "../DashBoard/Adminpages/ALLFood";
 
 // import ALLFoods from "../DashBoard/Adminpages/ALLFoods";
@@ -75,10 +73,10 @@ import AnnountsMent from "../Pages/AnnountsMent";
 import Postinfo from "../Components/SocialMediaCompos/Postinfo";
 import DetailEvent from "../Pages/DetailEvent";
 import RegisterInSchool from "../Pages/RegisterInSchool";
-import MainHome from "../DashBoard/Adminpages/MainHome";
 import AdminOnly from "../Private/AdminOnly";
 import AllBlogs from "../DashBoard/Adminpages/AllBlogs";
 import Addannouncement from "../DashBoard/Adminpages/Addannouncement";
+import AddBooks from "../DashBoard/Adminpages/AddBooks";
 
 //ends of the routs import
 
@@ -168,7 +166,7 @@ const router = createBrowserRouter(
                     element: <PrivateRoute><RegisterInSchool></RegisterInSchool></PrivateRoute>,
 
                 },
-
+              
 
                 // this route for teh food detailes page 
                 {
@@ -208,6 +206,10 @@ const router = createBrowserRouter(
                 {
                     path: "AddBlogs",
                     element: <AdminOnly><AddBlogs></AddBlogs></AdminOnly>
+                },
+                {
+                    path: "addBooks",
+                    element: <AdminOnly><AddBooks></AddBooks></AdminOnly>
                 },
                 {
                     path: "addannouncement",

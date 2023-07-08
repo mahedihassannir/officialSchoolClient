@@ -13,7 +13,7 @@ const useCart = () => {
     const [axiosSecure] = useAxiosSecure()
 
 
-    const token = localStorage.getItem('jwtToken');
+    // const token = localStorage.getItem('jwtToken');
 
     const { refetch, data: cart = [] } = useQuery({
 

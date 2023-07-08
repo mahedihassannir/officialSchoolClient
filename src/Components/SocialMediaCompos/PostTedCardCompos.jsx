@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { ContexM } from "../../Authentication/AuProvider";
 import IsAnmin from "../../hooks/IsAnmin";
+import { FaArrowAltCircleDown, FaArrowAltCircleRight, FaChartBar, FaFunnelDollar, FaHardHat, FaHeart, FaHeartBroken, FaLowVision, FaSave, FaThumbsDown, FaThumbsUp } from "react-icons/fa";
 
 const PostTedCardCompos = () => {
 
@@ -25,10 +26,12 @@ const PostTedCardCompos = () => {
 
     // console.log(posts);
 
+    const [like, Setlike] = useState(true)
+
     return (
         <div className="grid gap-4">
 
-            
+
             {
                 posts.map(res => <section key={res._id}>
 
@@ -66,7 +69,47 @@ const PostTedCardCompos = () => {
 
                         </div>
 
-                        <div className="py-10  mt-2 ">
+                        <div className=" ml-2 mt-2 ">
+
+                            <div className="flex items-center">
+                                <div onClick={() => Setlike(!like)} className="">
+                                    {
+
+                                        like ?
+                                            <FaHeart onClick={() => Setlike(!like)} className="text-red-400 text-2xl ml-4"></FaHeart>
+                                            :
+
+                                            <FaHeartBroken className=" text-2xl ml-4"></FaHeartBroken>
+                                    }
+
+                                </div>
+
+                                {/* comment section */}
+                                <div className="flex justify-center items-center ml-20">
+
+                                    <input type="text" placeholder="comment" className="input input-bordered w-[320px]" />
+
+                                    <button className="text-2xl -ml-8">
+                                        <abbr title="comment">
+
+                                            <FaArrowAltCircleRight></FaArrowAltCircleRight>
+                                        </abbr>
+                                    </button>
+                                </div>
+
+                                {/* ends of comment */}
+
+                                {/* save btn */}
+                                <div className="ml-10 ">
+                                    <button className="text-2xl"> <abbr title="save Post">
+                                        <FaSave></FaSave>
+                                    </abbr>
+                                    </button>
+                                </div>
+                            </div>
+
+
+
 
                         </div>
                     </div>

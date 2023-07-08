@@ -74,8 +74,8 @@ const FoodSingle = ({ data }) => {
                         <img className=" px-2 w-full pt-2 h-[160px]" src={data.image} alt="" />
 
                     </Link>
-                    <div className=" top-0 ml-48 py-1 px-1 mt-2  bg-[#340e8d] text-white absolute">
-                        <p className="flex items-center text-sm "><FaDollarSign></FaDollarSign> {data.price}</p>
+                    <div className=" top-0 ml-38 py-1 px-1 mt-2  bg-[#340e8d] text-white absolute">
+                        <p className="flex items-center text-sm "><FaDollarSign></FaDollarSign> {data.price} টাকা</p>
                     </div>
 
                 </div>
@@ -86,7 +86,7 @@ const FoodSingle = ({ data }) => {
                     <div className="text-center">
 
                         <p className="pb-2">name: {data.name}</p>
-                        <p className="pb-2 flex items-center justify-center">price:<FaDollarSign className="text-sm"></FaDollarSign>{data.price} 30</p>
+                        <p className="pb-2 flex items-center justify-center">price:<FaDollarSign className="text-sm"></FaDollarSign>{data.price} <span className="text-red-400 ml-2">টাকা</span></p>
 
                     </div>
 

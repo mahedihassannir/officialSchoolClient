@@ -1,16 +1,16 @@
 import { FaDollarSign } from "react-icons/fa";
+import UseBook from "../hooks/Usebook";
 
-import UseBook from "../../hooks/Usebook";
 
-const Books = () => {
+const Bookss = () => {
 
 
     const [Book] = UseBook()
 
 
-
+    // page books
     return (
-        <div className="ml-2 my-3 grid grid-cols-4 gap-8">
+        <div className="ml-2 my-3 grid grid-cols-5 gap-4">
             {
                 Book.map(res =>
                     <div key={res._id} className="border-2 cursor-pointer hover:border-[#340e8d] w-[250px] h-[300px]">
@@ -65,4 +65,4 @@ const Books = () => {
     );
 };
 
-export default Books;
+export default Bookss;
