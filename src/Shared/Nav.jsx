@@ -31,7 +31,7 @@ const Nav = () => {
             .then(res => {
                 const user = res.user
 
-                
+
                 // if()
 
             })
@@ -66,12 +66,12 @@ const Nav = () => {
                 </Link>
                 <ul className="flex gap-4 items-center">
                     <Link className="hover:text-[#db87f9] hover:shadow" >Home</Link>
-                    <Link className="hover:text-[#db87f9] hover:shadow " >Blog</Link>
+                    <Link className="hover:text-[#db87f9] hover:shadow " to="/blogs" >Blog</Link>
                     <Link className="hover:text-[#db87f9] hover:shadow" to="/registerinSchool" >Register in school</Link>
                     <Link className="hover:text-[#db87f9] hover:shadow" to='/OurTeachers'>OurTeachers</Link>
-                    <Link className="hover:text-[#db87f9] hover:shadow" to="OurTeachers">Curses</Link>
-                    <Link className="hover:text-[#db87f9] hover:shadow" to="OurTeachers">my classes</Link>
-                    <Link className="hover:text-[#db87f0] btn">enroll now</Link>
+                    <Link className="hover:text-[#db87f9] hover:shadow" to="/courses">Courses</Link>
+                    <Link className="hover:text-[#db87f9] hover:shadow" to="/myclass">my classes</Link>
+                    <Link className="hover:text-[#db87f0] btn" to="/courses">enroll now</Link>
 
                     <button onClick={() => SetDark(!dark)} className="btn">
                         {

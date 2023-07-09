@@ -77,6 +77,8 @@ import AdminOnly from "../Private/AdminOnly";
 import AllBlogs from "../DashBoard/Adminpages/AllBlogs";
 import Addannouncement from "../DashBoard/Adminpages/Addannouncement";
 import AddBooks from "../DashBoard/Adminpages/AddBooks";
+import Myclass from "../Pages/Courses/Myclass";
+import Courses from "../Pages/Courses/Courses";
 
 //ends of the routs import
 
@@ -166,7 +168,23 @@ const router = createBrowserRouter(
                     element: <PrivateRoute><RegisterInSchool></RegisterInSchool></PrivateRoute>,
 
                 },
-              
+                {
+                    path: 'blogs',
+                    element: <PrivateRoute><Blog></Blog></PrivateRoute>,
+
+                },
+
+                {
+                    path: 'myclass',
+                    element: <PrivateRoute><Myclass></Myclass></PrivateRoute>,
+
+                },
+                {
+                    path: 'courses',
+                    element: <PrivateRoute><Courses></Courses></PrivateRoute>,
+
+                },
+
 
                 // this route for teh food detailes page 
                 {

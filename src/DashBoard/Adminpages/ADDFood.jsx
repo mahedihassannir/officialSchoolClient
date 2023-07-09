@@ -30,7 +30,7 @@ const ADDFood = () => {
         const time = from.time.value
         const Description = from.description.value
 
-        const allFromData = { name, recipe,time, category, pricee, Description, }
+        const allFromData = { name, recipe, time, category, pricee, Description, }
 
         const price = parseInt(pricee)
 
@@ -56,7 +56,7 @@ const ADDFood = () => {
                     headers: {
                         "content-type": "application/json"
                     },
-                    body: JSON.stringify({ name,recipe, time, category, price, Description, image })
+                    body: JSON.stringify({ name, recipe, time, category, price, Description, image })
 
                 })
                     .then(res => res.json())

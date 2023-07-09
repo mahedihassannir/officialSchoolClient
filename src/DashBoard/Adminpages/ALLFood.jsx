@@ -2,7 +2,7 @@
 const ALLFood = () => {
     return (
         <div>
-            
+
         </div>
     );
 };
