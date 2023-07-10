@@ -83,7 +83,7 @@ const AddBlogs = () => {
 
 
                         }
-                        // navigate("   ")
+                        navigate("/blogs")
                     })
 
 

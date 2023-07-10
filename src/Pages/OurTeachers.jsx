@@ -17,14 +17,14 @@ const OurTeachers = () => {
     }, [])
 
     return (
-        <div className="mb-20 grid grid-cols-5 gap-4">
+        <div className="mb-20 grid grid-cols-4 mx-10">
             {
                 teachers.map(res => <div className="" key={res._id}>
 
                     <div>
-                        <div className="w-[280px] pb-2  rounded-lg border-2">
+                        <div className="w-[300px] pb-2  rounded-lg border-2">
                             <div className="">
-                                <img className=" w-full h-[250px] p-2" src={res.image} alt="" />
+                                <img className=" w-full h-[280px] p-2" src={res.image} alt="" />
                             </div>
                             <div className="pb-4">
 

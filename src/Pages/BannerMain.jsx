@@ -19,7 +19,7 @@ const BannerMain = () => {
                 </div>
                 <div className="w-1/2">
 
-                    <Lottie loop={true} animationData={animationlearning} />
+                    <Lottie loop={true}  animationData={animationlearning} />
 
                 </div>
             </div>

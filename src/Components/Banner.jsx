@@ -10,7 +10,7 @@ import '../ExtraCss/bg.css'
 const Banner = () => {
     return (
         <div className="">
-{/* bg for the nackground  */}
+            {/* bg for the nackground  */}
             <div className="bg h-screen mb-20  w-full   flex   justify-center items-center">
                 {/* this is the image side */}
                 <div className="w-1/3 ">

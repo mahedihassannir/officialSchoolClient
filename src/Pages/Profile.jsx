@@ -74,10 +74,17 @@ const Profile = () => {
                 <div className="profile">
                     {/* your added product  */}
                     <div className=" pl-2 pt-2 border-2 h-[500px] rounded-md  mt-5">
+                        <div className="pb-2">
+                            <h1 className="text-2xl font-semibold text-center">My inventory </h1>
+                        </div>
+                        <hr />
+                        {/* save posts */}
                         <div className="">
 
+                            hi i am mahedi
 
                         </div>
+
 
                     </div>
 

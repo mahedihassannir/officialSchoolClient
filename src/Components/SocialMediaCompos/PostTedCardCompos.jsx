@@ -1,15 +1,19 @@
-import { useContext } from "react";
+import { useContext, useRef } from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import { ContexM } from "../../Authentication/AuProvider";
 import IsAnmin from "../../hooks/IsAnmin";
-import { FaArrowAltCircleDown, FaArrowAltCircleRight, FaChartBar, FaFunnelDollar, FaHardHat, FaHeart, FaHeartBroken, FaLowVision, FaSave, FaThumbsDown, FaThumbsUp } from "react-icons/fa";
+import { FaArrowAltCircleDown, FaArrowAltCircleRight, FaChartBar, FaComment, FaFunnelDollar, FaHardHat, FaHeart, FaHeartBroken, FaLowVision, FaSave, FaThumbsDown, FaThumbsUp } from "react-icons/fa";
+import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 const PostTedCardCompos = () => {
 
     const [isAdmin] = IsAnmin()
     // const isAdmin=
 
+    // user 
+    const { user } = useContext(ContexM)
 
 
     const [posts, SetPost] = useState([])
@@ -26,7 +30,52 @@ const PostTedCardCompos = () => {
 
     // console.log(posts);
 
-    const [like, Setlike] = useState(true)
+    const [like, Setlike] = useState(false)
+
+    const userimg = user.displayURL
+
+
+
+    console.log(userimg);
+    const handleSavePost = (e) => {
+
+        e.preventDefault()
+
+        const comment = e.target.comment.value
+
+
+
+        fetch(`http://localhost:5000/comment`, {
+            method: "POST",
+            headers: {
+                "content-type": "application/json"
+            },
+            body: JSON.stringify({
+                comment, authoemail: user.email, Userimg: user.photoURL, name: user.displayName
+            })
+        })
+            .then(res => res.json())
+            .then(data => {
+
+                console.log(data);
+                if (data.insertedId) {
+
+                    Swal.fire({
+                        position: 'top-end',
+                        icon: 'success',
+                        title: `comment done`,
+                        showConfirmButton: false,
+                        timer: 300
+                    })
+
+                }
+
+
+            })
+
+
+
+    }
 
     return (
         <div className="grid gap-4">
@@ -36,7 +85,7 @@ const PostTedCardCompos = () => {
                 posts.map(res => <section key={res._id}>
 
 
-                    <div className="w-  mx-auto border-2 rounded-lg pb-4">
+                    <form onSubmit={handleSavePost} className="w-  mx-auto border-2 rounded-lg pb-4">
 
                         <div className="flex items-center">
                             <div className="avatar mt-2 ml-2">
@@ -84,15 +133,19 @@ const PostTedCardCompos = () => {
 
                                 </div>
 
+                                {/* other section */}
+
                                 {/* comment section */}
                                 <div className="flex justify-center items-center ml-20">
 
-                                    <input type="text" placeholder="comment" className="input input-bordered w-[320px]" />
+                                    <input  name="comment" type="text" placeholder="comment" className="input input-bordered w-[320px]" />
 
-                                    <button className="text-2xl -ml-8">
+                                    <button type="submit" className="text-2xl -ml-8">
+                                        {/* <input className=" -ml-8" name="comment" type="button" value="comment" /> */}
                                         <abbr title="comment">
 
-                                            <FaArrowAltCircleRight></FaArrowAltCircleRight>
+                                            <FaArrowAltCircleRight className="text-2xl"></FaArrowAltCircleRight>
+
                                         </abbr>
                                     </button>
                                 </div>
@@ -101,10 +154,17 @@ const PostTedCardCompos = () => {
 
                                 {/* save btn */}
                                 <div className="ml-10 ">
-                                    <button className="text-2xl"> <abbr title="save Post">
-                                        <FaSave></FaSave>
-                                    </abbr>
-                                    </button>
+                                    <Link to="/">
+                                        <p className="text-2xl flex"> <abbr title="show all comments">
+                                            <FaComment ></FaComment>
+
+                                        </abbr>
+                                            <span className="text-sm ml-1">show all comments</span>
+
+                                        </p>
+
+                                    </Link>
+
                                 </div>
                             </div>
 
@@ -112,7 +172,7 @@ const PostTedCardCompos = () => {
 
 
                         </div>
-                    </div>
+                    </form>
                 </section>
                 )
 

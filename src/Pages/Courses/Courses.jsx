@@ -3,7 +3,9 @@ const Courses = () => {
     return (
         <div>
 
-            hi i am courses
+            <div className="w-[300px] h-[300px] border-2">
+                j``
+            </div>
 
         </div>
     );
