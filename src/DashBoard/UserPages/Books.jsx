@@ -1,6 +1,7 @@
 import { FaDollarSign } from "react-icons/fa";
 
 import UseBook from "../../hooks/Usebook";
+import { Link } from "react-router-dom";
 
 const Books = () => {
 
@@ -50,8 +51,10 @@ const Books = () => {
 
                                 {/* <button disabled={user ? "" : disableBtn} className="btn hover:text-[#340e8d]  hover:bg-[#db87f0] ">read now</button> */}
 
-                                <button className="btn hover:text-[#340e8d]  hover:bg-[#db87f0] ">read now</button>
+                                <Link to={`/Dashboard/booksRead/${res._id}`}>
+                                    <button className="btn hover:text-[#340e8d]  hover:bg-[#db87f0] ">read now</button>
 
+                                </Link>
                             </div>
 
                         </div>

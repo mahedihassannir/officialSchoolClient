@@ -79,6 +79,7 @@ import Addannouncement from "../DashBoard/Adminpages/Addannouncement";
 import AddBooks from "../DashBoard/Adminpages/AddBooks";
 import Myclass from "../Pages/Courses/Myclass";
 import Courses from "../Pages/Courses/Courses";
+import ReadBooks from "../Pages/ReadBooks";
 
 //ends of the routs import
 
@@ -279,6 +280,11 @@ const router = createBrowserRouter(
                 {
                     path: "books",
                     element: <Books></Books>
+                },
+                {
+                    path: "booksRead/:id",
+                    element: <PrivateRoute><ReadBooks></ReadBooks></PrivateRoute>,
+                    loader: ({ params }) => fetch(`http://localhost:5000/redbook/${params.id}`)
                 },
                 {
                     path: "mycart",

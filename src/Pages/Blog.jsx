@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 // import { FaArrowAltCircleRight, FaHeart, FaHeartBroken, FaSave } from "react-icons/fa";
 import IsAnmin from "../hooks/IsAnmin";
 
+import { Helmet } from "react-helmet";
+
 
 const Blog = () => {
 
@@ -30,6 +32,11 @@ const Blog = () => {
 
     return (
         <div className="grid grid-cols-2 gap-5 p-20">
+
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Rupasdi B.B | Blog</title>
+            </Helmet>
 
 
             {

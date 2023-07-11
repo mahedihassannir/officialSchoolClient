@@ -13,12 +13,20 @@ import VideoIntro from "./VideoIntro";
 
 
 import '../ExtraCss/bg.css'
+import { Helmet } from "react-helmet";
 
 const Home = () => {
     return (
+
+
+
         // for hiding
         <div className="hidinginmobile">
             {/* this is banner section */}
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Rupasdi B.B High school</title>
+            </Helmet>
 
             <section className="">
                 <BannerMain></BannerMain>

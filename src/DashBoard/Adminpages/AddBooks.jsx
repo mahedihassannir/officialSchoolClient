@@ -29,10 +29,20 @@ const AddBooks = () => {
         const from = e.target
 
         const name = from.name.value
+
         const pricee = from.price.value
+
         const category = from.category.value
+
         const writter = from.writter.value
+
         const Description = from.description.value
+
+        const pages = from.pages.value
+
+        const bookDescription = from.bookDescription.value
+
+        const bookUrl = from.bookUrl.value
 
         // const allFromData = { name, recipe, time, category, pricee, Description, }
 
@@ -60,7 +70,7 @@ const AddBooks = () => {
                     headers: {
                         "content-type": "application/json"
                     },
-                    body: JSON.stringify({ name, writter, category, price, Description, image })
+                    body: JSON.stringify({ name, bookUrl, writter, category, price, Description, bookDescription, image, pages })
 
                 })
                     .then(res => res.json())
@@ -89,11 +99,35 @@ const AddBooks = () => {
 
 
     return (
-        <div className="w-full px-2 h-screen  bg2  ">
+        <div className="w-full px-2 h-screen  bg4  ">
 
             <h1 className='text-center text-3xl font-bold text-[#db87f0] mt-10'>Add Book section <span className='text-red-400'>complete</span></h1>
-            <form onSubmit={handleFrom} className="flex mt-16 ml-10 gap-2">
-                <div className="w-1/2 py-2 pl-2  rounded-lg  bg-teal-800">
+            <form onSubmit={handleFrom} className=" mt-16 ml-10 gap-2">
+                <div className="flex">
+
+                    <div className=" pl-5 ml-4 pt-4  w-1/2 py-2  rounded-lg ">
+
+                        <textarea placeholder='BOOK DESCRIPTION' className='rounded-lg border-2 w-11/12 pl-3 pt-3 ' name="bookDescription" id="" cols="30" rows="10" required></textarea>
+
+
+                    </div>
+                    {/* dis of book */}
+
+                    {/* right section */}
+
+                    <div className=" pl-5 pt-4  w-1/2 py-2  rounded-lg ">
+
+                        <textarea placeholder='Why this book ' className=' rounded-lg border-2 w-11/12 pl-3 pt-3 ' name="description" id="" cols="30" rows="10" required></textarea>
+
+
+                    </div>
+
+                </div>
+
+
+
+                {/* add book product  */}
+                <div className="w-1/2 py-2 mx-auto pl-2  rounded-lg  bg-teal-800">
 
                     {/* form admin comps */}
                     {/* <AddFoodInput></AddFoodInput> */}
@@ -125,16 +159,32 @@ const AddBooks = () => {
 
                         <div className="">
                             <label htmlFor="">
-                                <span className="text-gray-300">Category</span>
+                                <span className="text-gray-300 ">Category</span>
                             </label>
-                            <input name="category" className="input mt-2 input-bordered input-secondary w-full max-w-xs" type="text" placeholder="Food category" required />
+                            <input name="category" className="input  mt-2 input-bordered input-secondary w-full max-w-xs" type="text" placeholder="Food category" required />
                         </div>
 
                         <div className="">
                             <label htmlFor="">
-                                <span className="text-gray-300">Writter name</span>
+                                <span className="text-gray-300">Writer name</span>
                             </label>
                             <input name="writter" className="input mt-2 input-bordered input-secondary w-full max-w-xs" type="text" placeholder="Food name" required />
+                        </div>
+
+                        {/* page input */}
+
+                        <div className="">
+                            <label htmlFor="">
+                                <span className="text-gray-300">pages</span>
+                            </label>
+                            <input name="pages" className="input mt-2 input-bordered input-secondary w-full max-w-xs" type="number" placeholder="Pages" required />
+                        </div>
+
+                        <div className="">
+                            <label htmlFor="">
+                                <span className="text-gray-300">Book Url</span>
+                            </label>
+                            <input name='bookUrl' className="input mt-2 input-bordered input-secondary w-full max-w-xs" type="url" placeholder="Pages" required />
                         </div>
 
 
@@ -143,7 +193,7 @@ const AddBooks = () => {
 
                     <div className="text-center mt-2 ">
                         <button className='py-3 px-5 shadow-md text-gray-300 rounded-md hover:bg-[#db87f0] hover:text-white font-semibold mx-auto '>
-                            Add product
+                            Add Book
                         </button>
                     </div>
 
@@ -153,15 +203,10 @@ const AddBooks = () => {
 
                 </div>
 
-                {/* right section */}
-
-                <div className=" pl-5 pt-4  w-1/2 py-2  rounded-lg ">
-
-                    <textarea placeholder='Description About Food Product ' className=' rounded-lg border-2 w-11/12 pl-3 pt-3 ' name="description" id="" cols="30" rows="10" required></textarea>
-
-
-                </div>
             </form>
+
+
+
 
 
         </div>
