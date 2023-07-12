@@ -15,13 +15,20 @@ import VideoIntro from "./VideoIntro";
 import '../ExtraCss/bg.css'
 import { Helmet } from "react-helmet";
 
+import SlowScrollComponent from '../hooks/ShoeScrolling'
+
 const Home = () => {
+
+
+
+
+
     return (
 
 
 
         // for hiding
-        <div className="hidinginmobile">
+        <div id="myScrollElement" className="hidinginmobile">
             {/* this is banner section */}
             <Helmet>
                 <meta charSet="utf-8" />
@@ -99,7 +106,7 @@ const Home = () => {
             </section>
             {/* ends */}
 
-
+            {/* <SlowScrollComponent scrollElementId="myScrollElement" scrollSpeedFactor={2}></SlowScrollComponent> */}
 
         </div>
     );

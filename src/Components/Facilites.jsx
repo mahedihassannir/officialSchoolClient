@@ -7,7 +7,7 @@ const Facilites = () => {
 
             {/* hedding */}
             <div className="text-center ">
-                <h1 className="text-3xl font-bold pb-2">এক নজরে আমাদের <span className="text-[#db87f9]">রিডাক্স</span> কোর্স
+                <h1 className="text-3xl font-bold pb-2">এক নজরে আমাদের <span className="text-[#db87f9]">Mern Stack / Frontend</span> কোর্স
                 </h1>
 
                 <p className="text-lg">এই কোর্সে যা যা থাকছে</p>

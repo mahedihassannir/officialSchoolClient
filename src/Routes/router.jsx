@@ -248,12 +248,12 @@ const router = createBrowserRouter(
                 },
                 {
                     path: "ALLEvents",
-                    element: <ALLEvents></ALLEvents>
+                    element: <AdminOnly> <ALLEvents></ALLEvents></AdminOnly>
                 },
                 {
                     // aboied 
                     path: "addBlogs",
-                    element: <AddBlogs></AddBlogs>
+                    element: <AdminOnly> <AddBlogs></AddBlogs></AdminOnly>
                 },
                 {
                     path: "addTeachers",
@@ -273,12 +273,12 @@ const router = createBrowserRouter(
                 },
                 {
                     path: "ALLFood",
-                    element: <ALLFood></ALLFood>
+                    element: <AdminOnly><ALLFood></ALLFood></AdminOnly>
                 },
 
                 {
                     path: "ALLblogs",
-                    element: <AllBlogs></AllBlogs>
+                    element: <AdminOnly> <AllBlogs></AllBlogs></AdminOnly>
                 },
 
                 {

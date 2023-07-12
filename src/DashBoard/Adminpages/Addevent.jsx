@@ -1,7 +1,7 @@
 
 import Swal from 'sweetalert2';
 import '../../ExtraCss/bg.css'
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const Addevent = () => {
@@ -18,6 +18,17 @@ const Addevent = () => {
     const navigate = useNavigate()
     const ImageRef = useRef(null)
 
+
+    const [startedTime, setSelectedTime] = useState('');
+
+
+    const handleTimeChange = (event) => {
+        const { value } = event.target;
+        setSelectedTime(value);
+    };
+
+    console.log(startedTime);
+
     const handleFrom = (e) => {
 
         e.preventDefault()
@@ -25,12 +36,10 @@ const Addevent = () => {
 
         const title = from.name.value
         const description = from.description.value
-        const time = from.time.value
         const sites = from.sites.value
 
 
-        console.log({ title, description, time, sites });
-
+        
 
         // image upload system
 
@@ -54,7 +63,7 @@ const Addevent = () => {
                     headers: {
                         "content-type": "application/json"
                     },
-                    body: JSON.stringify({ title, description, time, sites, image })
+                    body: JSON.stringify({ title, description,  sites, image,startedTime })
 
                 })
                     .then(res => res.json())
@@ -121,7 +130,8 @@ const Addevent = () => {
                             <label htmlFor="">
                                 <span className="text-gray-300">Start Time</span>
                             </label>
-                            <input name="time" className="input mt-2 input-bordered input-secondary w-full max-w-xs" type="time" placeholder="Food name" required />
+                            <input name="time" value={startedTime}
+                                onChange={handleTimeChange} className="input mt-2 input-bordered input-secondary w-full max-w-xs" type="time" placeholder="Food name" required />
                         </div>
 
                         <div className="">
