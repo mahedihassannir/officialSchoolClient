@@ -61,10 +61,10 @@ const AnnountsMent = () => {
     }
 
     return (
-        <div className="my-20">
+        <div className="pb-60">
             <p className="my-5 mx-4 "> total announcement :  <span className="text-red-500">{announcement.length}</span></p>
 
-            <div className="grid grid-cols-3 pb-20    gap-5">
+            <div className="grid grid-cols-3 pb-40 gap-5">
 
 
                 {

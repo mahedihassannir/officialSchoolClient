@@ -73,7 +73,7 @@ const Sidebar = () => {
                             event</Link>
 
 
-                        <Link className=" hover:text-blue-600 text-lg py-2 flex items-center gap-2 " to="/ReadBooks/addTeachers"> <FaChalkboardTeacher></FaChalkboardTeacher>add teachers</Link>
+                        <Link className=" hover:text-blue-600 text-lg py-2 flex items-center gap-2 " to="/Dashboard/addTeachers"> <FaChalkboardTeacher></FaChalkboardTeacher>add teachers</Link>
 
                         <Link className="text-lg py-2 flex items-center gap-2 hover:text-blue-600" to="/Dashboard/aDDFood"> <FaGlassMartiniAlt></FaGlassMartiniAlt>add Food</Link>
 

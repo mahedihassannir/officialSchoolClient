@@ -80,6 +80,8 @@ import AddBooks from "../DashBoard/Adminpages/AddBooks";
 import Myclass from "../Pages/Courses/Myclass";
 import Courses from "../Pages/Courses/Courses";
 import ReadBooks from "../Pages/ReadBooks";
+import HowUse from "../Video/HowUse";
+import TeacherDetail from "../Pages/TeacherDetail";
 
 //ends of the routs import
 
@@ -114,6 +116,11 @@ const router = createBrowserRouter(
                 {
                     path: 'OurTeachers',
                     element: <OurTeachers></OurTeachers>
+                },
+                {
+                    path: '/teacherDetail/:id',
+                    element: <PrivateRoute><TeacherDetail></TeacherDetail></PrivateRoute>,
+                    loader: ({ params }) => fetch(`http://localhost:5000/teacherDetail/${params.id}`)
                 },
                 {
                     path: 'Mod',
@@ -183,6 +190,11 @@ const router = createBrowserRouter(
                 {
                     path: 'courses',
                     element: <PrivateRoute><Courses></Courses></PrivateRoute>,
+
+                },
+                {
+                    path: 'howuse',
+                    element: <PrivateRoute><HowUse></HowUse></PrivateRoute>,
 
                 },
 

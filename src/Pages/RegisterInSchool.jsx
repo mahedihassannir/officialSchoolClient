@@ -10,7 +10,7 @@ import commingsoon from '../../public/newsectionaddloging/boylearn.json'
 
 const RegisterInSchool = () => {
     return (
-        <div className="w-full h-screen py-2">
+        <div className="w-full h-screen py-2">  
 
 
             <div>

@@ -32,6 +32,15 @@ const AddTeachers = () => {
         const skills = from.skills.value
         const time = from.time.value
         const Description = from.description.value
+        const Achivements = from.Achivements.value
+        const email = from.email.value
+
+        const Ma = from.Ma.value
+        const Ba = from.Ba.value
+        const Honors = from.Honors.value
+        const PHD = from.PHD.value
+        // contact
+        const contact = from.contact.value
 
         const allFromData = { TeacherName, title, category, skills, time, Description, }
 
@@ -58,7 +67,22 @@ const AddTeachers = () => {
                     headers: {
                         "content-type": "application/json"
                     },
-                    body: JSON.stringify({ TeacherName, title, category, skills, time, Description, image })
+                    body: JSON.stringify({
+                        TeacherName,
+                        title,
+                        category,
+                        skills,
+                        time,
+                        Description,
+                        image,
+                        Achivements,
+                        Ma,
+                        Ba,
+                        Honors,
+                        PHD,
+                        email,
+                        contact
+                    })
 
                 })
                     .then(res => res.json())
@@ -90,7 +114,7 @@ const AddTeachers = () => {
     }
 
     return (
-        <div className="bg2">
+        <div className="bg5">
 
             <h1 className='text-center text-3xl font-bold text-[#db87f0] mt-10'>Add teacher section <span className='text-red-400'>complete</span> </h1>
 
@@ -155,8 +179,108 @@ const AddTeachers = () => {
                         </div>
 
 
+
+
                     </div>
 
+                    {/* educational  */}
+                    <hr className='my-2' />
+
+                    <h3 className='text-lg font-bold font-mono text-white'>E@mail</h3>
+
+                    <div className="">
+                        <label htmlFor="">
+                            <span className="text-gray-300">email</span>
+                        </label>
+                        <br />
+                        <input name="email" className="input mt-2 input-bordered input-secondary w-full max-w-xs" type="email" placeholder="Teacher email" required />
+
+                    </div>
+
+
+                    <hr className='my-2' />
+
+
+
+                    <h3 className='text-lg font-bold text-white font-mono'>Educational</h3>
+
+                    {/*  */}
+
+                    <div className="">
+                        <label htmlFor="">
+                            <span className="text-gray-300 pl-2">Ma</span>
+                        </label>
+                        <br />
+
+                        <input name="Ma" className="ml-2 input mt-2 input-bordered input-secondary w-full max-w-xs" type="text" placeholder="Teacher skill or not N/A" required />
+
+                    </div>
+
+                    {/*  */}
+
+                    <div className="">
+                        <label htmlFor="">
+                            <span className="text-gray-300 pl-2">Ba</span>
+                        </label>
+                        <br />
+                        <input name="Ba" className="ml-2 input mt-2 input-bordered input-secondary w-full max-w-xs" type="text" placeholder="Teacher skill or not N/A" required />
+
+                    </div>
+
+                    {/*  */}
+
+                    <div className="">
+                        <label htmlFor="">
+                            <span className="text-gray-300 pl-2">Honors</span>
+                        </label>
+                        <br />
+                        <input name="Honors" className="ml-2 input mt-2 input-bordered input-secondary w-full max-w-xs" type="text" placeholder="Teacher skill or not N/A" required />
+
+                    </div>
+
+                    <div className="">
+                        <label htmlFor="">
+                            <span className="text-gray-300 pl-2">PHD</span>
+                        </label>
+                        <br />
+                        <input name="PHD" className="ml-2 input mt-2 input-bordered input-secondary w-full max-w-xs" type="text" placeholder="Teacher skill or not N/A" required />
+
+                    </div>
+
+                    {/*  educational ends*/}
+
+                    <hr className='my-2' />
+
+                    <h3 className='text-lg font-bold font-mono text-white'>Achivements </h3>
+                    <div className="">
+
+                        <div className="">
+                            <label htmlFor="">
+                                <span className="text-gray-300">Achivements</span>
+                            </label>
+                            <br />
+                            <input name="Achivements" className="ml-2 input mt-2 input-bordered input-secondary w-full max-w-xs" type="text" placeholder="write in this style: ma | ba | ca  | da |" required />
+
+                        </div>
+
+
+                    </div>
+                    {/* contact */}
+                    <hr className='my-2' />
+                    <h3 className='text-lg font-bold font-mono text-white'>contact Info </h3>
+                    <div className="">
+
+                        <div className="">
+                            <label htmlFor="">
+                                <span className="text-gray-300">contact</span>
+                            </label>
+                            <br />
+                            <input name="contact" className="ml-2 input mt-2 input-bordered input-secondary w-full max-w-xs" type="text" placeholder="write in this style: mobile | email | fackbook" required />
+
+                        </div>
+
+
+                    </div>
 
                     <div className="text-center w-1/2 mt-2 py-3 px-5 shadow-md text-gray-300 rounded-md hover:bg-[#db87f0] hover:text-white font-semibold mx-auto">
                         <button>
