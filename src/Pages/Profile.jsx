@@ -26,7 +26,7 @@ const Profile = () => {
 
     // useEffect(() => {
 
-    //     fetch(`http://localhost:5000/personPost/${user.email}`)
+    //     fetch(`https://server-nine-ecru.vercel.app/personPost/${user.email}`)
     //         .then(res => res.json())
     //         .then(data => SetPost(data))
 

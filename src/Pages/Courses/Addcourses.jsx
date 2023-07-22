@@ -1,10 +1,8 @@
+import { useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
-import Swal from 'sweetalert2';
-import '../../ExtraCss/bg.css'
-import { useRef, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-
-const Addevent = () => {
+const Addcourses = () => {
 
 
     const key = `890b5ec0923fcc8472f7e690406adc40`
@@ -36,10 +34,12 @@ const Addevent = () => {
 
         const title = from.name.value
         const description = from.description.value
-        const sites = from.sites.value
+        const Fee = from.sites.value
+
+        const company = from.company.value
 
 
-        
+
 
         // image upload system
 
@@ -58,12 +58,12 @@ const Addevent = () => {
                 console.log(image);
 
                 // post on db start
-                fetch(`https://server-nine-ecru.vercel.app/event`, {
+                fetch(`https://server-nine-ecru.vercel.app/addcourse`, {
                     method: "POST",
                     headers: {
                         "content-type": "application/json"
                     },
-                    body: JSON.stringify({ title, description,  sites, image,startedTime })
+                    body: JSON.stringify({ title, description, Fee, image, startedTime,company })
 
                 })
                     .then(res => res.json())
@@ -79,7 +79,7 @@ const Addevent = () => {
                             })
 
                         }
-                        navigate('/events')
+                        navigate('/courses')
                     })
                 // post on db ends
 
@@ -89,15 +89,13 @@ const Addevent = () => {
         // ends
     }
 
-
-
     return (
         <div className='bg2'>
-            <h1 className='text-center text-3xl font-bold text-[#db87f0] mt-10'>Add event section  </h1>
+            <h1 className='text-center text-3xl font-bold text-[#db87f0] mt-10'>Add Courses </h1>
 
 
             <form onSubmit={handleFrom} className="flex mt-16 ml-10 gap-2">
-                <div className="w-1/2 py-2 pl-2  rounded-lg  bg-teal-800">
+                <div className="w-1/2 py-2 pl-2  rounded-lg  bg-teal-900">
 
                     {/* form admin comps */}
                     {/* <AddFoodInput></AddFoodInput> */}
@@ -106,39 +104,50 @@ const Addevent = () => {
                     <div className="grid grid-cols-2 gap-2 px-2">
                         <div className="">
                             <label htmlFor="">
-                                <span className="text-gray-300">Event Name</span>
+                                <span className="text-gray-300">Course Name</span>
                                 {/* text-[#340e8d] */}
                             </label>
-                            <input name="name" className="input mt-2 input-bordered input-secondary w-full max-w-xs" type="text" placeholder="Event name" required />
+                            <input name="name" className="input mt-2 input-bordered input-secondary w-full max-w-xs" type="text" placeholder="Course Name" required />
                         </div>
 
                         <div className="">
                             <label htmlFor="">
-                                <span className="text-gray-300">arange of sites</span>
+                                <span className="text-gray-300">Course Fee</span>
                             </label>
-                            <input name="sites" className="input mt-2 input-bordered input-secondary w-full max-w-xs" type="text" placeholder="sites " required />
+                            <input name="sites" className="input mt-2 input-bordered input-secondary w-full max-w-xs" type="text" placeholder="Course Fee " required />
                         </div>
 
                         <div className="">
                             <label htmlFor="">
-                                <span className="text-gray-300">Event picture</span>
+                                <span className="text-gray-300">Course picture</span>
                             </label>
                             <input ref={ImageRef} type="file" placeholder="You can't touch this" className="file-input file-input-bordered w-full max-w-xs" required />
                         </div>
 
                         <div className="">
                             <label htmlFor="">
-                                <span className="text-gray-300">Start Time</span>
+                                <span className="text-gray-300">Start Date</span>
                             </label>
                             <input name="time" value={startedTime}
-                                onChange={handleTimeChange} className="input mt-2 input-bordered input-secondary w-full max-w-xs" type="time" placeholder="Food name" required />
+
+                                // how we get the value from the date input 1 make a state then onchange value go to the state then the state value we geeting
+
+
+                                onChange={handleTimeChange} className="input mt-2 input-bordered input-secondary w-full max-w-xs" type="date" placeholder="Food name" required />
                         </div>
 
                         <div className="">
                             <label htmlFor="">
-                                <span className=" text-gray-300">octaion of event </span>
+                                <span className=" text-gray-300">Course instracture </span>
                             </label>
-                            <input name="time" className="input mt-2 input-bordered input-secondary w-full max-w-xs" type="name" placeholder="event octaion" required />
+                            <input name="time" className="input mt-2 input-bordered input-secondary w-full max-w-xs" type="name" placeholder="Course instracture" required />
+                        </div>
+
+                        <div className="">
+                            <label htmlFor="">
+                                <span className=" text-gray-300">Course company </span>
+                            </label>
+                            <input name="company" className="input mt-2 input-bordered input-secondary w-full max-w-xs" type="name" placeholder="Course company" required />
                         </div>
 
 
@@ -147,7 +156,8 @@ const Addevent = () => {
 
                     <div className="text-center w-1/2 mt-2 py-3 px-5 shadow-md text-gray-300 rounded-md hover:bg-[#db87f0] hover:text-white font-semibold mx-auto">
                         <button>
-                            Add Event
+                            Add
+                            Course
                         </button>
                     </div>
 
@@ -161,9 +171,9 @@ const Addevent = () => {
 
                 <div className=" pl-5 pt-4  w-1/2 py-2  rounded-lg ">
                     <label htmlFor="">
-                        <span className=' text-lg text-white '>Event Description</span>
+                        <span className=' text-lg text-white '>Course Description</span>
                     </label>
-                    <textarea placeholder='Description About Food Product ' className=' my-2 rounded-lg border-2 w-11/12 pl-3 pt-3 ' name="description" id="" cols="30" rows="10" required></textarea>
+                    <textarea placeholder='Course Description ' className=' my-2 rounded-lg border-2 w-11/12 pl-3 pt-3 ' name="description" id="" cols="30" rows="10" required></textarea>
 
 
                 </div>
@@ -173,4 +183,4 @@ const Addevent = () => {
     );
 };
 
-export default Addevent;
+export default Addcourses;

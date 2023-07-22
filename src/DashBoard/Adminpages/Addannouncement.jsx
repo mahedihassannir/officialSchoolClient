@@ -19,7 +19,7 @@ const Addannouncement = () => {
         console.log(announce, title);
 
 
-        fetch('http://localhost:5000/sociaannouncementlpost ', {
+        fetch('https://server-nine-ecru.vercel.app/sociaannouncementlpost ', {
             method: "POST",
             headers: {
                 "content-type": "application/json"
@@ -56,7 +56,7 @@ const Addannouncement = () => {
     return (
 
         <div className="w-full pb-20 bg3 ">
-            <h1 className='text-center text-3xl font-bold text-[#db87f0] mt-10'>Add teacher section <span className='text-red-400'>complete</span> </h1>
+            <h1 className='text-center text-3xl font-bold text-[#db87f0] mt-10'>Add Announcement section </h1>
 
 
 

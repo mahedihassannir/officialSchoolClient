@@ -69,7 +69,7 @@ const AuProvider = ({ children }) => {
 
             if (watch) {
 
-                axios.post(`http://localhost:5000/jwt`, { email: watch.email })
+                axios.post(`https://server-nine-ecru.vercel.app/jwt`, { email: watch.email })
                     .then(data => {
                         // console.log("token", data.data.token);
                         localStorage.setItem("jwtToken", data.data.token)

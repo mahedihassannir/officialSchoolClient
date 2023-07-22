@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { ContexM } from "../Authentication/AuProvider";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import Swal from "sweetalert2";
 
@@ -33,9 +33,9 @@ const Register = () => {
         const email = from.email.value
         const password = from.password.value
 
-      
+
         const file = ImageRef.current.files[0]
-        
+
 
         const Imagedaat = new FormData()
 
@@ -51,7 +51,7 @@ const Register = () => {
                 const image = data.data.display_url
 
 
-               
+
 
 
                 creareUser(email, password)
@@ -59,7 +59,7 @@ const Register = () => {
                         const user = res.user
 
                         console.log(user.displayName);
-                        
+
 
                         const userinfo = { name: name, email: user.email, photo: data.data.display_url, password: password, id: user._id, emailVerified: user.emailVerified, anonimus: user.isAnonymous, }
 
@@ -88,7 +88,7 @@ const Register = () => {
 
 
 
-                        fetch(`http://localhost:5000/users`, {
+                        fetch(`https://server-nine-ecru.vercel.app/users`, {
                             method: "POST",
                             headers: {
                                 "content-type": "application/json"
@@ -119,11 +119,16 @@ const Register = () => {
             <div className="flex mt-10">
                 {/* lesf side img */}
                 <div className=" mr-2 w-[70%]">
-
+                    <img src="https://i.ibb.co/nDTry0D/reg.jpg" alt="" className="h-[700px]" />
                 </div>
                 {/* login from */}
-                <form onSubmit={handleRegister} className="w-[400px] pt-20 border-2 h-[500px]">
+                <form onSubmit={handleRegister} className="w-[400px] pt-20 border-2 h-[550px]">
+
                     <div className="">
+                        <div className="-mt-10 ml-40">
+
+                            <img className="w-20" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT90ggMjZuPfFaMYlpiDlefPLujHkP3tNsyV96n4zsTF2rY0kXfWJ-d_7A7VwDhX_MLCvY&usqp=CAU" alt="" />
+                        </div>
                         <div className="ml-10">
 
                             <label htmlFor="">
@@ -176,6 +181,13 @@ const Register = () => {
                                 <input required ref={ImageRef} type="file" placeholder="Name" className=" opacity-60 cursor-pointer  input input-bordered mt-1 input-primary w-full max-w-xs" />
 
                             </div>
+
+                        </div>
+                        <div className="">
+
+                            <Link to="/login" className="ml-8 mt-2  link">
+                                Already Have an account
+                            </Link>
 
                         </div>
                         {/* ends */}

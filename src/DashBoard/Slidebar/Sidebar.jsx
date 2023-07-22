@@ -65,7 +65,7 @@ const Sidebar = () => {
 
                         <hr />
 
-                        <Link className="hover:text-red-400 py-2 text-lg flex items-center gap-2 " to="/Dashboard/addevent"> <FaDiscourse></FaDiscourse> add
+                        <Link className="hover:text-red-400 py-2 text-lg flex items-center gap-2 " to="/Dashboard/aDDcourse"> <FaDiscourse></FaDiscourse> add
                             Course</Link>
                         {/* course end */}
                         <hr />

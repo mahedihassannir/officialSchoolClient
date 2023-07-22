@@ -29,7 +29,7 @@ const FoodSingle = ({ data }) => {
 
 
 
-        fetch(`http://localhost:5000/carts`, {
+        fetch(`https://server-nine-ecru.vercel.app/carts`, {
             method: "POST",
             headers: {
                 "content-type": "application/json"

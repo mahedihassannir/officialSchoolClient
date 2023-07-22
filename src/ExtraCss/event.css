@@ -23,6 +23,21 @@
   font-weight: bold;
 }
 
+#btn99 {
+  background: linear-gradient(to right, #db87f0, #340e8d);
+  /* Use linear-gradient() to create a horizontal gradient
+       from red (#ff0000) to green (#00ff00) */
+
+  /* Add other styling properties as desired */
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  margin-top: 6px;
+}
+
 #text {
   color: linear-gradient(to right, #db87f0, #340e8d);
   /* Use linear-gradient() to create a horizontal gradient

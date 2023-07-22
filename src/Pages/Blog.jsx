@@ -19,7 +19,7 @@ const Blog = () => {
 
     useEffect(() => {
 
-        fetch('http://localhost:5000/blogs')
+        fetch('https://server-nine-ecru.vercel.app/blogs')
             .then(res => res.json())
             .then(data => SetPost(data))
 

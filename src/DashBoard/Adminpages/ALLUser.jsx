@@ -15,7 +15,7 @@ const ALLUser = () => {
 
     // useEffect(() => {
 
-    //     fetch(`http://localhost:5000/user`)
+    //     fetch(`https://server-nine-ecru.vercel.app/user`)
     //         .then(res => res.json())
     //         .then(data => Setdata(data))
 
@@ -26,13 +26,13 @@ const ALLUser = () => {
     const { user } = useContext(ContexM)
 
     console.log(user.photoURL);
-    
+
     // query 
     const token = localStorage.getItem('jwtToken');
 
     const { data: users = [], refetch } = useQuery(['user'], async () => {
 
-        const res = await fetch('http://localhost:5000/user', {
+        const res = await fetch('https://server-nine-ecru.vercel.app/user', {
 
             headers: { authorization: `Bearer ${token}` }
 
@@ -47,7 +47,7 @@ const ALLUser = () => {
     const handleMakeAdmin = (person) => {
 
 
-        fetch(`http://localhost:5000/user/admin/${person._id}`, {
+        fetch(`https://server-nine-ecru.vercel.app/user/admin/${person._id}`, {
             method: "PATCH"
         })
             .then(res => res.json())
@@ -58,7 +58,7 @@ const ALLUser = () => {
                     Swal.fire({
                         position: 'top-end',
                         icon: 'success',
-                        title: `${user.displayName} is now admin `,
+                        title: `now admin `,
                         showConfirmButton: false,
                         timer: 1500
                     })

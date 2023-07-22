@@ -15,7 +15,9 @@ const VideoIntro = () => {
                     <div data-aos="fade-up"
                         data-aos-anchor-placement="top-center" >
 
-                        <video controls className='rounded-md' loop={true} src="../../public/video.mp4" ></video>
+                        <iframe width="900" height="500" src="https://www.youtube.com/embed/LlCwHnp3kL4" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
 
                     </div>
                 </div>

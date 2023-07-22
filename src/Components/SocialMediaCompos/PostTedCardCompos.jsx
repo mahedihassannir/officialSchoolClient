@@ -21,7 +21,7 @@ const PostTedCardCompos = () => {
 
     useEffect(() => {
 
-        fetch('http://localhost:5000/allpost')
+        fetch('https://server-nine-ecru.vercel.app/allpost')
             .then(res => res.json())
             .then(data => SetPost(data))
 
@@ -45,7 +45,7 @@ const PostTedCardCompos = () => {
 
 
 
-        fetch(`http://localhost:5000/comment`, {
+        fetch(`https://server-nine-ecru.vercel.app/comment`, {
             method: "POST",
             headers: {
                 "content-type": "application/json"

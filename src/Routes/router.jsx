@@ -82,6 +82,9 @@ import Courses from "../Pages/Courses/Courses";
 import ReadBooks from "../Pages/ReadBooks";
 import HowUse from "../Video/HowUse";
 import TeacherDetail from "../Pages/TeacherDetail";
+import Addcourses from "../Pages/Courses/Addcourses";
+import SingleDetaile from "../Pages/Courses/singleDetaile";
+
 
 //ends of the routs import
 
@@ -106,6 +109,11 @@ const router = createBrowserRouter(
                     element: <Login></Login>
                 },
                 {
+                    path: "/detailes/:id",
+                    element: <SingleDetaile></SingleDetaile>,
+                    loader: ({ params }) => fetch(`https://server-nine-ecru.vercel.app/courseA/${params.id}`)
+                },
+                {
                     path: 'register',
                     element: <Register></Register>
                 },
@@ -120,7 +128,7 @@ const router = createBrowserRouter(
                 {
                     path: '/teacherDetail/:id',
                     element: <PrivateRoute><TeacherDetail></TeacherDetail></PrivateRoute>,
-                    loader: ({ params }) => fetch(`http://localhost:5000/teacherDetail/${params.id}`)
+                    loader: ({ params }) => fetch(`https://server-nine-ecru.vercel.app/teacherDetail/${params.id}`)
                 },
                 {
                     path: 'Mod',
@@ -131,7 +139,7 @@ const router = createBrowserRouter(
                     element: <PrivateRoute>
                         <Events></Events>
                     </PrivateRoute>,
-                    loader: () => fetch(`http://localhost:5000/event`)
+                    loader: () => fetch(`https://server-nine-ecru.vercel.app/event`)
 
                 },
                 {
@@ -141,7 +149,7 @@ const router = createBrowserRouter(
                 {
                     path: 'Food',
                     element: <Food></Food>,
-                    loader: () => fetch(`http://localhost:5000/food`)
+                    loader: () => fetch(`https://server-nine-ecru.vercel.app/food`)
                 },
                 {
                     path: 'profile',
@@ -169,7 +177,7 @@ const router = createBrowserRouter(
                 {
                     path: '/events/:id',
                     element: <PrivateRoute><DetailEvent></DetailEvent></PrivateRoute>,
-                    loader: ({ params }) => fetch(`http://localhost:5000/event/${params.id}`)
+                    loader: ({ params }) => fetch(`https://server-nine-ecru.vercel.app/event/${params.id}`)
                 },
                 {
                     path: 'registerinSchool',
@@ -203,7 +211,7 @@ const router = createBrowserRouter(
                 {
                     path: '/FoodCheckout/:id',
                     element: <FoodCheckout></FoodCheckout>,
-                    loader: ({ params }) => fetch(`http://localhost:5000/foodDeTailes/${params.id}`)//this route gose to teh food detailes
+                    loader: ({ params }) => fetch(`https://server-nine-ecru.vercel.app/foodDeTailes/${params.id}`)//this route gose to teh food detailes
                 },
 
                 // this route for teh food detailes page ends 
@@ -268,8 +276,8 @@ const router = createBrowserRouter(
                     element: <AdminOnly><ADDFood></ADDFood></AdminOnly>
                 },
                 {
-                    path: "aDDblog",
-                    element: <AdminOnly></AdminOnly>
+                    path: "aDDcourse",
+                    element: <AdminOnly><Addcourses></Addcourses></AdminOnly>
                 },
                 {
                     path: "ALLFood",
@@ -296,7 +304,7 @@ const router = createBrowserRouter(
                 {
                     path: "booksRead/:id",
                     element: <PrivateRoute><ReadBooks></ReadBooks></PrivateRoute>,
-                    loader: ({ params }) => fetch(`http://localhost:5000/redbook/${params.id}`)
+                    loader: ({ params }) => fetch(`https://server-nine-ecru.vercel.app/redbook/${params.id}`)
                 },
                 {
                     path: "mycart",
@@ -314,6 +322,7 @@ const router = createBrowserRouter(
                     path: "sSerProfile",
                     element: <USerProfile></USerProfile>
                 },
+
 
 
             ]

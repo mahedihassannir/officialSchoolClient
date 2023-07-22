@@ -15,7 +15,7 @@ const IsAnmin = () => {
         queryFn: async () => {
 
 
-            // fetch(`http://localhost:5000/user/admin/${user.email}`)
+            // fetch(`https://server-nine-ecru.vercel.app/user/admin/${user.email}`)
 
             const res = await axiosSecure.get(`user/admin/${user.email}`);
 

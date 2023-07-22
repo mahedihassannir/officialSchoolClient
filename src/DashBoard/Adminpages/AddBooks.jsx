@@ -65,7 +65,7 @@ const AddBooks = () => {
                 console.log(image);
 
                 // post on db start
-                fetch(`http://localhost:5000/booksPost`, {
+                fetch(`https://server-nine-ecru.vercel.app/booksPost`, {
                     method: "POST",
                     headers: {
                         "content-type": "application/json"
@@ -101,7 +101,7 @@ const AddBooks = () => {
     return (
         <div className="w-full px-2 h-screen  bg4  ">
 
-            <h1 className='text-center text-3xl font-bold text-[#db87f0] mt-10'>Add Book section <span className='text-red-400'>complete</span></h1>
+            <h1 className='text-center text-3xl font-bold text-[#db87f0] mt-10'>Add Book section </h1>
             <form onSubmit={handleFrom} className=" mt-16 ml-10 gap-2">
                 <div className="flex">
 

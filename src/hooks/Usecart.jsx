@@ -6,7 +6,7 @@ import useAxiosSecure from "./useAxiosSecure";
 
 
 const useCart = () => {
-    const { user,loader } = useContext(ContexM);
+    const { user, loader } = useContext(ContexM);
 
     // const token = localStorage.getItem("jwtToken")
 
@@ -23,7 +23,7 @@ const useCart = () => {
 
 
         // queryFn: async () => {
-        //     const res = await fetch(`http://localhost:5000/carts?email=${user?.email}`, {
+        //     const res = await fetch(`https://server-nine-ecru.vercel.app/carts?email=${user?.email}`, {
         //         headers: { authorization: `barer ${token}` }
         //     })
 
@@ -32,8 +32,8 @@ const useCart = () => {
 
         queryFn: async () => {
             const res = await axiosSecure(`/carts?email=${user?.email}`)
-    
-            
+
+
             return res.data;
 
         }

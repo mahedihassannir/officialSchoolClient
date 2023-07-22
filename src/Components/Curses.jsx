@@ -5,7 +5,7 @@ const Curses = () => {
     const [data, Setdata] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/class`).then(res => res.json()).then(data => Setdata(data))
+        fetch(`https://server-nine-ecru.vercel.app/class`).then(res => res.json()).then(data => Setdata(data))
 
 
     }, [])
