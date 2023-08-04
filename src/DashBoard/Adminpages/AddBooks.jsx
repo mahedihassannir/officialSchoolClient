@@ -65,7 +65,7 @@ const AddBooks = () => {
                 console.log(image);
 
                 // post on db start
-                fetch(`https://server-nine-ecru.vercel.app/booksPost`, {
+                fetch(`http://localhost:5000/booksPost`, {
                     method: "POST",
                     headers: {
                         "content-type": "application/json"

@@ -8,7 +8,7 @@ const OurTeachers = () => {
 
     useEffect(() => {
 
-        const url = 'https://server-nine-ecru.vercel.app/uteacher'
+        const url = 'http://localhost:5000/uteacher'
 
         fetch(url)
             .then(res => res.json())

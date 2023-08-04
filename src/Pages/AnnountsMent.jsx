@@ -12,7 +12,7 @@ const AnnountsMent = () => {
 
     useEffect(() => {
 
-        fetch(`https://server-nine-ecru.vercel.app/cursorannouncement`)
+        fetch(`http://localhost:5000/cursorannouncement`)
             .then(res => res.json())
             .then(data => Setannouncement(data))
 
@@ -38,7 +38,7 @@ const AnnountsMent = () => {
             }).then((result) => {
                 if (result.isConfirmed) {
 
-                    fetch(`https://server-nine-ecru.vercel.app/cursorannouncement/${id}`, {
+                    fetch(`http://localhost:5000/cursorannouncement/${id}`, {
                         method: "DELETE"
                     })
                         .then(res => res.json())

@@ -20,7 +20,7 @@ const usePost = () => {
 
 
         queryFn: async () => {
-            const res = await fetch(`https://server-nine-ecru.vercel.app/personPost?email=${user?.email}`, {
+            const res = await fetch(`http://localhost:5000/personPost?email=${user?.email}`, {
                 headers: { authorization: `barer ${token}` }
             })
 

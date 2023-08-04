@@ -21,7 +21,7 @@ const Cart = () => {
 
     // here is the delete method
     const handleDeleteCart = (id) => {
-        fetch(`https://server-nine-ecru.vercel.app/cartDelete/${id}`, {
+        fetch(`http://localhost:5000/cartDelete/${id}`, {
             method: "DELETE"
         })
             .then(res => res.json())

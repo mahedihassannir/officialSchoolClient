@@ -51,7 +51,7 @@ const ADDFood = () => {
                 console.log(image);
 
                 // post on db start
-                fetch(`https://server-nine-ecru.vercel.app/food`, {
+                fetch(`http://localhost:5000/food`, {
                     method: "POST",
                     headers: {
                         "content-type": "application/json"

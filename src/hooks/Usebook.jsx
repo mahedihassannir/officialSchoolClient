@@ -22,7 +22,7 @@ const UseBook = () => {
 
 
         queryFn: async () => {
-            const res = await fetch(`https://server-nine-ecru.vercel.app/books`)
+            const res = await fetch(`http://localhost:5000/books`)
 
             return res.json();
         },

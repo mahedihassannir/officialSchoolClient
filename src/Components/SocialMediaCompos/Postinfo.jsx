@@ -56,7 +56,7 @@ const Postinfo = () => {
 
                 console.log(data);
 
-                fetch('https://server-nine-ecru.vercel.app/socialpost', {
+                fetch('http://localhost:5000/socialpost', {
                     method: "POST",
                     headers: {
                         "content-type": "application/json"

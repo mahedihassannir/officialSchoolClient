@@ -15,7 +15,7 @@ const ALLUser = () => {
 
     // useEffect(() => {
 
-    //     fetch(`https://server-nine-ecru.vercel.app/user`)
+    //     fetch(`http://localhost:5000/user`)
     //         .then(res => res.json())
     //         .then(data => Setdata(data))
 
@@ -32,7 +32,7 @@ const ALLUser = () => {
 
     const { data: users = [], refetch } = useQuery(['user'], async () => {
 
-        const res = await fetch('https://server-nine-ecru.vercel.app/user', {
+        const res = await fetch('http://localhost:5000/user', {
 
             headers: { authorization: `Bearer ${token}` }
 
@@ -47,7 +47,7 @@ const ALLUser = () => {
     const handleMakeAdmin = (person) => {
 
 
-        fetch(`https://server-nine-ecru.vercel.app/user/admin/${person._id}`, {
+        fetch(`http://localhost:5000/user/admin/${person._id}`, {
             method: "PATCH"
         })
             .then(res => res.json())

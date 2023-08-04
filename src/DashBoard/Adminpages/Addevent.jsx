@@ -58,7 +58,7 @@ const Addevent = () => {
                 console.log(image);
 
                 // post on db start
-                fetch(`https://server-nine-ecru.vercel.app/event`, {
+                fetch(`http://localhost:5000/event`, {
                     method: "POST",
                     headers: {
                         "content-type": "application/json"

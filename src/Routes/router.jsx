@@ -84,6 +84,8 @@ import HowUse from "../Video/HowUse";
 import TeacherDetail from "../Pages/TeacherDetail";
 import Addcourses from "../Pages/Courses/Addcourses";
 import SingleDetaile from "../Pages/Courses/singleDetaile";
+import Successfullpage from "../Components/paymentsuccessfullpage/Successfullpage";
+import Paymentfail from "../Components/paymentsuccessfullpage/Paymentfail";
 
 
 //ends of the routs import
@@ -108,10 +110,24 @@ const router = createBrowserRouter(
                     path: 'Login',
                     element: <Login></Login>
                 },
+
+                // this is payment failed page
+
+                {
+                    path: 'payment/failed/:tranId',
+                    element: <Paymentfail></Paymentfail>
+                },
+
+                // this is payment successfull page
+
+                {
+                    path: 'payment/success/:tranId',
+                    element: <Successfullpage></Successfullpage>
+                },
                 {
                     path: "/detailes/:id",
                     element: <SingleDetaile></SingleDetaile>,
-                    loader: ({ params }) => fetch(`https://server-nine-ecru.vercel.app/courseA/${params.id}`)
+                    loader: ({ params }) => fetch(`http://localhost:5000/courseA/${params.id}`)
                 },
                 {
                     path: 'register',
@@ -128,7 +144,7 @@ const router = createBrowserRouter(
                 {
                     path: '/teacherDetail/:id',
                     element: <PrivateRoute><TeacherDetail></TeacherDetail></PrivateRoute>,
-                    loader: ({ params }) => fetch(`https://server-nine-ecru.vercel.app/teacherDetail/${params.id}`)
+                    loader: ({ params }) => fetch(`http://localhost:5000/teacherDetail/${params.id}`)
                 },
                 {
                     path: 'Mod',
@@ -139,7 +155,7 @@ const router = createBrowserRouter(
                     element: <PrivateRoute>
                         <Events></Events>
                     </PrivateRoute>,
-                    loader: () => fetch(`https://server-nine-ecru.vercel.app/event`)
+                    loader: () => fetch(`http://localhost:5000/event`)
 
                 },
                 {
@@ -149,7 +165,7 @@ const router = createBrowserRouter(
                 {
                     path: 'Food',
                     element: <Food></Food>,
-                    loader: () => fetch(`https://server-nine-ecru.vercel.app/food`)
+                    loader: () => fetch(`http://localhost:5000/food`)
                 },
                 {
                     path: 'profile',
@@ -177,7 +193,7 @@ const router = createBrowserRouter(
                 {
                     path: '/events/:id',
                     element: <PrivateRoute><DetailEvent></DetailEvent></PrivateRoute>,
-                    loader: ({ params }) => fetch(`https://server-nine-ecru.vercel.app/event/${params.id}`)
+                    loader: ({ params }) => fetch(`http://localhost:5000/event/${params.id}`)
                 },
                 {
                     path: 'registerinSchool',
@@ -211,7 +227,7 @@ const router = createBrowserRouter(
                 {
                     path: '/FoodCheckout/:id',
                     element: <FoodCheckout></FoodCheckout>,
-                    loader: ({ params }) => fetch(`https://server-nine-ecru.vercel.app/foodDeTailes/${params.id}`)//this route gose to teh food detailes
+                    loader: ({ params }) => fetch(`http://localhost:5000/foodDeTailes/${params.id}`)//this route gose to teh food detailes
                 },
 
                 // this route for teh food detailes page ends 
@@ -304,7 +320,7 @@ const router = createBrowserRouter(
                 {
                     path: "booksRead/:id",
                     element: <PrivateRoute><ReadBooks></ReadBooks></PrivateRoute>,
-                    loader: ({ params }) => fetch(`https://server-nine-ecru.vercel.app/redbook/${params.id}`)
+                    loader: ({ params }) => fetch(`http://localhost:5000/redbook/${params.id}`)
                 },
                 {
                     path: "mycart",

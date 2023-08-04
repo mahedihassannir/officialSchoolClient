@@ -19,7 +19,7 @@ const Sponsors = () => {
 
                     <img className="mr-5" src="https://i.ibb.co/Jt29fjw/google.png" alt="" />
                     <img src="https://i.ibb.co/tsYhgHX/logo.png" alt="" />
-              s      <img src="https://i.ibb.co/j34rmpn/logo-coca-cola.png
+                    <img src="https://i.ibb.co/j34rmpn/logo-coca-cola.png
 " alt="" />
                     <img src="https://i.ibb.co/WKZhsvG/logo-godrej.png
 " alt="" />
@@ -27,7 +27,7 @@ const Sponsors = () => {
 " alt="" />
                     <img src="https://i.ibb.co/8rYBbb5/logo-paypal.png
 " alt="" />
-                  
+
                 </Marquee>
             </div>
         </div>

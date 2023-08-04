@@ -13,7 +13,7 @@ const ALLTeachers = () => {
 
     const { data: teachers = [], refetch } = useQuery(['user'], async () => {
 
-        const res = await fetch('https://server-nine-ecru.vercel.app/uteacher', {
+        const res = await fetch('http://localhost:5000/uteacher', {
 
             headers: { authorization: `Bearer ${token}` }
 

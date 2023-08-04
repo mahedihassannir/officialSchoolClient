@@ -59,7 +59,7 @@ const AddBlogs = () => {
 
                 console.log(data);
 
-                fetch('https://server-nine-ecru.vercel.app/blogpost', {
+                fetch('http://localhost:5000/blogpost', {
                     method: "POST",
                     headers: {
                         "content-type": "application/json"

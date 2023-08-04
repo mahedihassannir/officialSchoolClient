@@ -19,7 +19,7 @@ const Addannouncement = () => {
         console.log(announce, title);
 
 
-        fetch('https://server-nine-ecru.vercel.app/sociaannouncementlpost ', {
+        fetch('http://localhost:5000/sociaannouncementlpost ', {
             method: "POST",
             headers: {
                 "content-type": "application/json"
