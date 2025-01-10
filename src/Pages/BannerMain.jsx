@@ -11,7 +11,7 @@ const BannerMain = () => {
             <div className="w-full h-screen flex justify-center items-center">
                 <div className="w-1/2">
 
-                    <p>রূপসদী বৃন্দাবন উচ্চ বিদ্যালয়</p>
+                    <p>গ্রামীণ কম্পিউটার সায়েন্স</p>
                     <h1 className='text-6xl link-error leading-normal font-bold text-[#db87f0] '>আমাদের স্বনামধন্য <br /> <span className='text-[#340e8d]'>স্কুলে স্বাগতম</span></h1>
                     <p className='pt-3 leading-7'>
                         রূপসদী বৃন্দাবন উচ্চ বিদ্যালয় বাঁশরামপুরে অবস্থিত একটি জনপ্রিয় বিদ্যালয়, রূপসদীতে স্থানীয় ব্যবসার অধীনে তালিকাভুক্ত রূপসদী, রূপসদীতে উচ্চ বিদ্যালয়, | ১৯১৫ সালে মাইম চন্দ্র রায় স্বর্গীয় স্থাপিত এই আদালতটি গত ছাত্রকাল ধরে অত্র এলাকায় শিক্ষার আলোকে সমর্থন করেন।

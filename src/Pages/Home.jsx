@@ -32,7 +32,7 @@ const Home = () => {
             {/* this is banner section */}
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>Rupasdi B.B High school</title>
+                <title>গ্রামীণ কম্পিউটার সায়েন্স</title>
             </Helmet>
 
             <section className="">

@@ -89,7 +89,7 @@ const Login = () => {
                     <div className="">
                         <div className="-mt-10 ml-40">
 
-                            <img className="w-20" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT90ggMjZuPfFaMYlpiDlefPLujHkP3tNsyV96n4zsTF2rY0kXfWJ-d_7A7VwDhX_MLCvY&usqp=CAU" alt="" />
+                            <img className="w-28" src="https://i.ibb.co.com/hBrmsDg/123.png" alt="" />
                         </div>
                         <div className="ml-10">
 

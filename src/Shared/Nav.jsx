@@ -56,11 +56,11 @@ const Nav = () => {
             <nav className=" text-black flex px-10  h-24 justify-between items-center ">
                 {/* logos */}
                 <Link to="/">
-                    <h1 className="text-lg text-[#db87f0] font-bold">
+                    <h1 className="text-lg text-red-600 font-bold">
 
-                        রূপসদী বৃন্দাবন
+                    গ্রামীণ কম্পিউটার  
                         <span className=" ml-2 link-accent text-[#340e8d]">
-                            উচ্চ বিদ্যালয়
+                        সায়েন্স 
                         </span>
                     </h1>
                 </Link>

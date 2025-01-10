@@ -10,7 +10,7 @@ const Principal = () => {
                 {/* this is image side  */}
                 <div className="w-1/2 h-[700px]  ">
 
-                    <img loading="lazy" className=" radd h-[500px]" src="https://i.ibb.co/fNYdt0x/zam.jpg" alt="" data-aos="fade-up"
+                    <img loading="lazy" className=" radd h-[500px]" src="https://i.ibb.co.com/3SzPRGF/mamun.png" alt="" data-aos="fade-up"
                         data-aos-anchor-placement="top-center" />
 
                 </div>
@@ -21,7 +21,10 @@ const Principal = () => {
                     {/* data-aos="zoom-in-left" */}
                     <div className="mt-24">
 
-                        <h1 data-aos="zoom-out-right" className="pb-5 text-[#db87f0] text-4xl leading-normal font-bold">রূপসদী বৃন্দাবন উচ্চ বিদ্যালয়ের <span className="text-[#340e8d]">প্রধান শিক্ষক</span></h1>
+                        <h1 data-aos="zoom-out-right" className="pb-5 text-green-600 text-4xl leading-normal font-bold">গ্রামীণ কম্পিউটার সায়েন্স 
+                            
+                            <br />
+                            <span className="text-[#340e8d]">নির্বাহী কর্মকর্তা</span></h1>
                         <p className="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis reprehenderit ex vel rem ad veritatis aperiam voluptas maiores quam labore ea minima, dicta magnam, nam illum voluptatem in laboriosam modi.</p>
                     </div>
 
