@@ -15,7 +15,7 @@ const ALLUser = () => {
 
     // useEffect(() => {
 
-    //     fetch(`http://localhost:5000/user`)
+    //     fetch(`https://school-server-main-cgaqorflu-mahedinir34678gmailcoms-projects.vercel.app/user`)
     //         .then(res => res.json())
     //         .then(data => Setdata(data))
 
@@ -32,7 +32,7 @@ const ALLUser = () => {
 
     const { data: users = [], refetch } = useQuery(['user'], async () => {
 
-        const res = await fetch('http://localhost:5000/user', {
+        const res = await fetch('https://school-server-main-cgaqorflu-mahedinir34678gmailcoms-projects.vercel.app/user', {
 
             headers: { authorization: `Bearer ${token}` }
 
@@ -47,7 +47,7 @@ const ALLUser = () => {
     const handleMakeAdmin = (person) => {
 
 
-        fetch(`http://localhost:5000/user/admin/${person._id}`, {
+        fetch(`https://school-server-main-cgaqorflu-mahedinir34678gmailcoms-projects.vercel.app/user/admin/${person._id}`, {
             method: "PATCH"
         })
             .then(res => res.json())

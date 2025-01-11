@@ -56,7 +56,7 @@ const Postinfo = () => {
 
                 console.log(data);
 
-                fetch('http://localhost:5000/socialpost', {
+                fetch('https://school-server-main-cgaqorflu-mahedinir34678gmailcoms-projects.vercel.app/socialpost', {
                     method: "POST",
                     headers: {
                         "content-type": "application/json"

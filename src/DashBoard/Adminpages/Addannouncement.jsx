@@ -19,7 +19,7 @@ const Addannouncement = () => {
         console.log(announce, title);
 
 
-        fetch('http://localhost:5000/sociaannouncementlpost ', {
+        fetch('https://school-server-main-cgaqorflu-mahedinir34678gmailcoms-projects.vercel.app/sociaannouncementlpost ', {
             method: "POST",
             headers: {
                 "content-type": "application/json"

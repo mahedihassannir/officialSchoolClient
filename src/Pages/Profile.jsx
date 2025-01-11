@@ -26,7 +26,7 @@ const Profile = () => {
 
     // useEffect(() => {
 
-    //     fetch(`http://localhost:5000/personPost/${user.email}`)
+    //     fetch(`https://school-server-main-cgaqorflu-mahedinir34678gmailcoms-projects.vercel.app/personPost/${user.email}`)
     //         .then(res => res.json())
     //         .then(data => SetPost(data))
 

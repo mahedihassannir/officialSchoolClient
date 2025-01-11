@@ -58,7 +58,7 @@ const Addcourses = () => {
                 console.log(image);
 
                 // post on db start
-                fetch(`http://localhost:5000/addcourse`, {
+                fetch(`https://school-server-main-cgaqorflu-mahedinir34678gmailcoms-projects.vercel.app/addcourse`, {
                     method: "POST",
                     headers: {
                         "content-type": "application/json"

@@ -30,7 +30,7 @@ const Payment = () => {
     }
 
     try {
-      const response = await axios.post(`http://localhost:5000/payment/success/${transactionId}`, {
+      const response = await axios.post(`https://school-server-main-cgaqorflu-mahedinir34678gmailcoms-projects.vercel.app/payment/success/${transactionId}`, {
         name,
         phone
       });

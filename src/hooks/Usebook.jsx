@@ -22,7 +22,7 @@ const UseBook = () => {
 
 
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/books`)
+            const res = await fetch(`https://school-server-main-cgaqorflu-mahedinir34678gmailcoms-projects.vercel.app/books`)
 
             return res.json();
         },

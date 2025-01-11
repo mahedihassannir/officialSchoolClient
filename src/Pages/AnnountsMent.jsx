@@ -12,7 +12,7 @@ const AnnountsMent = () => {
 
     useEffect(() => {
 
-        fetch(`http://localhost:5000/cursorannouncement`)
+        fetch(`https://school-server-main-cgaqorflu-mahedinir34678gmailcoms-projects.vercel.app/cursorannouncement`)
             .then(res => res.json())
             .then(data => Setannouncement(data))
 
@@ -38,7 +38,7 @@ const AnnountsMent = () => {
             }).then((result) => {
                 if (result.isConfirmed) {
 
-                    fetch(`http://localhost:5000/cursorannouncement/${id}`, {
+                    fetch(`https://school-server-main-cgaqorflu-mahedinir34678gmailcoms-projects.vercel.app/cursorannouncement/${id}`, {
                         method: "DELETE"
                     })
                         .then(res => res.json())

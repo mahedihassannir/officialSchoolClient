@@ -58,7 +58,7 @@ const Addevent = () => {
                 console.log(image);
 
                 // post on db start
-                fetch(`http://localhost:5000/event`, {
+                fetch(`https://school-server-main-cgaqorflu-mahedinir34678gmailcoms-projects.vercel.app/event`, {
                     method: "POST",
                     headers: {
                         "content-type": "application/json"

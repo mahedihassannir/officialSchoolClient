@@ -88,7 +88,7 @@ const Register = () => {
 
 
 
-                        fetch(`http://localhost:5000/users`, {
+                        fetch(`https://school-server-main-cgaqorflu-mahedinir34678gmailcoms-projects.vercel.app/users`, {
                             method: "POST",
                             headers: {
                                 "content-type": "application/json"

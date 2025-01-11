@@ -21,7 +21,7 @@ const PostTedCardCompos = () => {
 
     useEffect(() => {
 
-        fetch('http://localhost:5000/allpost')
+        fetch('https://school-server-main-cgaqorflu-mahedinir34678gmailcoms-projects.vercel.app/allpost')
             .then(res => res.json())
             .then(data => SetPost(data))
 
@@ -45,7 +45,7 @@ const PostTedCardCompos = () => {
 
 
 
-        fetch(`http://localhost:5000/comment`, {
+        fetch(`https://school-server-main-cgaqorflu-mahedinir34678gmailcoms-projects.vercel.app/comment`, {
             method: "POST",
             headers: {
                 "content-type": "application/json"

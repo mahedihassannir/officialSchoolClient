@@ -13,7 +13,7 @@ const ALLTeachers = () => {
 
     const { data: teachers = [], refetch } = useQuery(['user'], async () => {
 
-        const res = await fetch('http://localhost:5000/uteacher', {
+        const res = await fetch('https://school-server-main-cgaqorflu-mahedinir34678gmailcoms-projects.vercel.app/uteacher', {
 
             headers: { authorization: `Bearer ${token}` }
 

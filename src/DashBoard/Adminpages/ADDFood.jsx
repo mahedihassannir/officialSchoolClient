@@ -51,7 +51,7 @@ const ADDFood = () => {
                 console.log(image);
 
                 // post on db start
-                fetch(`http://localhost:5000/food`, {
+                fetch(`https://school-server-main-cgaqorflu-mahedinir34678gmailcoms-projects.vercel.app/food`, {
                     method: "POST",
                     headers: {
                         "content-type": "application/json"

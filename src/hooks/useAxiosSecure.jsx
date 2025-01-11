@@ -10,7 +10,7 @@ const useAxiosSecure = () => {
   const navigate = useNavigate();
 
   const axiosSecure = axios.create({
-    baseURL: 'http://localhost:5000/',
+    baseURL: 'https://school-server-main-cgaqorflu-mahedinir34678gmailcoms-projects.vercel.app/',
   });
 
   useEffect(() => {

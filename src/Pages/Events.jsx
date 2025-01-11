@@ -30,7 +30,7 @@ const Events = () => {
             }).then((result) => {
                 if (result.isConfirmed) {
 
-                    fetch(`http://localhost:5000/eventdelete/${id}`, {
+                    fetch(`https://school-server-main-cgaqorflu-mahedinir34678gmailcoms-projects.vercel.app/eventdelete/${id}`, {
                         method: "DELETE"
                     })
                         .then(res => res.json())

@@ -127,7 +127,7 @@ const router = createBrowserRouter(
                 {
                     path: "/detailes/:id",
                     element: <SingleDetaile></SingleDetaile>,
-                    loader: ({ params }) => fetch(`http://localhost:5000/courseA/${params.id}`)
+                    loader: ({ params }) => fetch(`https://school-server-main-cgaqorflu-mahedinir34678gmailcoms-projects.vercel.app/courseA/${params.id}`)
                 },
                 {
                     path: 'register',
@@ -144,7 +144,7 @@ const router = createBrowserRouter(
                 {
                     path: '/teacherDetail/:id',
                     element: <TeacherDetail></TeacherDetail>,
-                    loader: ({ params }) => fetch(`http://localhost:5000/teacherDetail/${params.id}`)
+                    loader: ({ params }) => fetch(`https://school-server-main-cgaqorflu-mahedinir34678gmailcoms-projects.vercel.app/teacherDetail/${params.id}`)
                 },
                 {
                     path: 'Mod',
@@ -155,7 +155,7 @@ const router = createBrowserRouter(
                     element: 
                         <Events></Events>
                    ,
-                    loader: () => fetch(`http://localhost:5000/event`)
+                    loader: () => fetch(`https://school-server-main-cgaqorflu-mahedinir34678gmailcoms-projects.vercel.app/event`)
 
                 },
                 {
@@ -165,7 +165,7 @@ const router = createBrowserRouter(
                 {
                     path: 'Food',
                     element: <Food></Food>,
-                    loader: () => fetch(`http://localhost:5000/food`)
+                    loader: () => fetch(`https://school-server-main-cgaqorflu-mahedinir34678gmailcoms-projects.vercel.app/food`)
                 },
                 {
                     path: 'profile',
@@ -193,7 +193,7 @@ const router = createBrowserRouter(
                 {
                     path: '/events/:id',
                     element: <PrivateRoute><DetailEvent></DetailEvent></PrivateRoute>,
-                    loader: ({ params }) => fetch(`http://localhost:5000/event/${params.id}`)
+                    loader: ({ params }) => fetch(`https://school-server-main-cgaqorflu-mahedinir34678gmailcoms-projects.vercel.app/event/${params.id}`)
                 },
                 {
                     path: 'registerinSchool',
@@ -227,7 +227,7 @@ const router = createBrowserRouter(
                 {
                     path: '/FoodCheckout/:id',
                     element: <FoodCheckout></FoodCheckout>,
-                    loader: ({ params }) => fetch(`http://localhost:5000/foodDeTailes/${params.id}`)//this route gose to teh food detailes
+                    loader: ({ params }) => fetch(`https://school-server-main-cgaqorflu-mahedinir34678gmailcoms-projects.vercel.app/foodDeTailes/${params.id}`)//this route gose to teh food detailes
                 },
 
                 // this route for teh food detailes page ends 
@@ -320,7 +320,7 @@ const router = createBrowserRouter(
                 {
                     path: "booksRead/:id",
                     element: <PrivateRoute><ReadBooks></ReadBooks></PrivateRoute>,
-                    loader: ({ params }) => fetch(`http://localhost:5000/redbook/${params.id}`)
+                    loader: ({ params }) => fetch(`https://school-server-main-cgaqorflu-mahedinir34678gmailcoms-projects.vercel.app/redbook/${params.id}`)
                 },
                 {
                     path: "mycart",

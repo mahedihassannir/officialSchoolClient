@@ -8,7 +8,7 @@ const OurTeachers = () => {
 
     useEffect(() => {
 
-        const url = 'http://localhost:5000/uteacher'
+        const url = 'https://school-server-main-cgaqorflu-mahedinir34678gmailcoms-projects.vercel.app/uteacher'
 
         fetch(url)
             .then(res => res.json())

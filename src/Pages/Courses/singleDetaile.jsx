@@ -18,7 +18,7 @@ const SingleDetaile = () => {
         console.log(userinfo);
 
 
-        fetch("http://localhost:5000/order", {
+        fetch("https://school-server-main-cgaqorflu-mahedinir34678gmailcoms-projects.vercel.app/order", {
             method: "POST",
             headers: {
                 "content-type": "application/json"

@@ -11,7 +11,7 @@ const AdminHome = () => {
 
     const { data: users = [], refetch } = useQuery(['user'], async () => {
 
-        const res = await fetch('http://localhost:5000/user', {
+        const res = await fetch('https://school-server-main-cgaqorflu-mahedinir34678gmailcoms-projects.vercel.app/user', {
 
             headers: { authorization: `Bearer ${token}` }
 
@@ -29,7 +29,7 @@ const AdminHome = () => {
     useEffect(() => {
 
 
-        fetch(`http://localhost:5000/allpost`)
+        fetch(`https://school-server-main-cgaqorflu-mahedinir34678gmailcoms-projects.vercel.app/allpost`)
             .then(res => res.json())
             .then(data => {
                 SetData(data)
