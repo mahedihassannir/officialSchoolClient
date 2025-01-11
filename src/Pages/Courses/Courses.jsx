@@ -9,43 +9,26 @@ import { Link } from 'react-router-dom';
 
 const Courses = () => {
 
-    const token = localStorage.getItem('jwtToken');
-
-    const { data: Courses = [], refetch } = useQuery(['user'], async () => {
-
-        const res = await fetch('http://localhost:5000/courses', {
-
-            headers: { authorization: `Bearer ${token}` }
-
-        })
-        return res.json()
-
-
-    })
-
-
-
 
     return (
         <div className='w-full h-screen grid grid-cols-3'>
 
 
-            {
-                Courses.map(course => <div key={course._id} className="w-[350px] h-[467px] border-2 rounded-md shadow-sm">
+            <div key={""} className="w-[350px] h-[467px] border-2 rounded-md shadow-sm">
 
                     <div className="">
 
                         <div className="">
-                            <img className='w-fulll h-60 p-1 shadow-lg' src={course.image} alt="" />
+                            <img className='w-fulll h-60 p-1 shadow-lg' src={"https://i.ibb.co.com/M5sZ5j8/big-one.png"} alt="" />
                         </div>
 
 
                         <div className="p-2">
 
-                            <h4>{course.title}</h4>
+                            <h4>{"hello"}</h4>
 
                             <h4 className='pt-2'><span className=' underline text-blue-400'>
-                                {course.company}
+                                {"hello"}
                             </span>
 
 
@@ -55,7 +38,7 @@ const Courses = () => {
                             <div className="mt-2">
                                 <div className="flex justify-between items-center">
 
-                                    <div className="">Enroll Date : {course.startedTime}</div>
+                                    <div className="">Enroll Date : {"hello"}</div>
 
                                     <div className="">
                                         <p className="bg-purple-500 p-2 rounded-md text-white">Beginner     </p>
@@ -79,7 +62,7 @@ const Courses = () => {
                                 <div className="">
 
                                     <h4 className='text-lg text-red-500'>
-                                        ${course.Fee} Taka
+                                        ${"hello"} Taka
                                     </h4>
                                 </div>
 
@@ -87,7 +70,7 @@ const Courses = () => {
 
                             {/* here is pricing section ends */}
 
-                            <Link to={`/detailes/${course._id}`} className="text-center">
+                            <Link to={`/payment`} className="text-center">
 
                                 <button id='btn99'>Enroll</button>
 
@@ -98,8 +81,8 @@ const Courses = () => {
 
                     </div>
 
-                </div>)
-            }
+                </div>
+           
 
 
 

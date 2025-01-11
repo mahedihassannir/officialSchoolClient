@@ -114,7 +114,7 @@ const router = createBrowserRouter(
                 // this is payment failed page
 
                 {
-                    path: 'payment/failed/:tranId',
+                    path: 'payment',
                     element: <Paymentfail></Paymentfail>
                 },
 
@@ -143,7 +143,7 @@ const router = createBrowserRouter(
                 },
                 {
                     path: '/teacherDetail/:id',
-                    element: <PrivateRoute><TeacherDetail></TeacherDetail></PrivateRoute>,
+                    element: <TeacherDetail></TeacherDetail>,
                     loader: ({ params }) => fetch(`http://localhost:5000/teacherDetail/${params.id}`)
                 },
                 {
@@ -152,15 +152,15 @@ const router = createBrowserRouter(
                 },
                 {
                     path: 'events',
-                    element: <PrivateRoute>
+                    element: 
                         <Events></Events>
-                    </PrivateRoute>,
+                   ,
                     loader: () => fetch(`http://localhost:5000/event`)
 
                 },
                 {
                     path: 'social',
-                    element: <PrivateRoute><Social></Social></PrivateRoute>
+                    element: <Social></Social>
                 },
                 {
                     path: 'Food',

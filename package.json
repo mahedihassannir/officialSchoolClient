@@ -25,6 +25,7 @@
     "react-pageflip": "^2.0.3",
     "react-parallax-tilt": "^1.7.145",
     "react-router-dom": "^6.11.2",
+    "react-toastify": "^11.0.2",
     "recharts": "^2.7.2",
     "sweetalert2": "^11.7.12"
   },

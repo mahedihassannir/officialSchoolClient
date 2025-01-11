@@ -116,20 +116,20 @@ const Register = () => {
 
     return (
         <div className="w-full h-screen ">
-            <div className="flex mt-10">
+            <div className="flex items-center mt-10">
                 {/* lesf side img */}
-                <div className=" mr-2 w-[70%]">
+                <div className=" hidden md:block mr-2 w-[70%]">
                     <img src="https://i.ibb.co/nDTry0D/reg.jpg" alt="" className="h-[700px]" />
                 </div>
                 {/* login from */}
                 <form onSubmit={handleRegister} className="w-[400px] pt-20 border-2 h-[550px]">
 
                     <div className="">
-                        <div className="-mt-10 ml-40">
+                        <div className="-mt-16 lg-mt-10 flex justify-center">
 
-                            <img className="w-20" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT90ggMjZuPfFaMYlpiDlefPLujHkP3tNsyV96n4zsTF2rY0kXfWJ-d_7A7VwDhX_MLCvY&usqp=CAU" alt="" />
+                            <img className="w-24" src="https://i.ibb.co.com/hBrmsDg/123.png" alt="" />
                         </div>
-                        <div className="ml-10">
+                        <div className="ml-2 lg:ml-10">
 
                             <label htmlFor="">
                                 <span>Name</span>
@@ -143,7 +143,7 @@ const Register = () => {
                         </div>
                         {/* ends */}
 
-                        <div className="ml-10">
+                        <div className="ml-2 lg:ml-10">
 
                             <label htmlFor="">
                                 <span>Email</span>
@@ -156,7 +156,7 @@ const Register = () => {
 
                         </div>
                         {/* ends */}
-                        <div className="ml-10">
+                        <div className="ml-2 lg:ml-10">
 
                             <label htmlFor="">
                                 <span>Password</span>
@@ -169,7 +169,7 @@ const Register = () => {
 
                         </div>
                         {/* ends */}
-                        <div className="ml-10">
+                        <div className="ml-2 lg:ml-10">
 
                             <label htmlFor="">
                                 <span>image</span>

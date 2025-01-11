@@ -1,7 +1,7 @@
 
 const Teachers = () => {
     return (
-        <div className="w-full h-[60vh] px-10 ">
+        <div className="w-full h-auto lg:h-[60vh] px-10 ">
             {/*title section  */}
             <section>
 
@@ -9,7 +9,7 @@ const Teachers = () => {
 
             </section>
             {/* ends */}
-            <section className="grid grid-cols-4">
+            <section className="grid grid-cols-1 gap-2 lg:grid-cols-4">
                 <div className="w-[300px] h-[300px]  rounded-lg border-2">
                     <div className="">
                         <img className="w-full h-[230px p-2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsmGFRI_sEYgHk4N9uCQ4XL-K-3ttOy-VnXwAjB-SDC-SbXAZCm4JygIZXroYF5vxHVCk&usqp=CAU" alt="" />

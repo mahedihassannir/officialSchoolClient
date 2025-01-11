@@ -75,23 +75,21 @@ const Login = () => {
 
     return (
 
-        <div className="w-full  h-screen ">
-            <div className="flex mt-10">
+        <div className="w-full  h-screen  ">
+            <div className="flex mt-10 items-center">
                 {/* lesf side img */}
-                <div className=" mr-2 w-[70%]">
-
+                <div className="hidden md:block mr-2 w-[70%]">
                     <img className="h-[700px]" src="https://i.ibb.co/dJSssmN/login.jpg" alt="" />
-
-
                 </div>
+
                 {/* login from */}
                 <form onSubmit={handleLogin} className="w-[400px] pt-20 border-2 h-[500px] rounde-sm">
                     <div className="">
-                        <div className="-mt-10 ml-40">
+                        <div className="-mt-16 lg-mt-10 flex justify-center">
 
                             <img className="w-28" src="https://i.ibb.co.com/hBrmsDg/123.png" alt="" />
                         </div>
-                        <div className="ml-10">
+                        <div className=" ml-2 lg:ml-10">
 
                             <label htmlFor="">
                                 <span>Email</span>
@@ -104,7 +102,7 @@ const Login = () => {
 
                         </div>
                         {/* ends */}
-                        <div className="ml-10">
+                        <div className="ml-2 lg:ml-10">
 
                             <label htmlFor="">
                                 <span>Password</span>

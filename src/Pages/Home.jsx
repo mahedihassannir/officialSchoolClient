@@ -16,6 +16,7 @@ import '../ExtraCss/bg.css'
 import { Helmet } from "react-helmet";
 
 import SlowScrollComponent from '../hooks/ShoeScrolling'
+import { Link } from "react-router-dom";
 
 const Home = () => {
 
@@ -28,7 +29,7 @@ const Home = () => {
 
 
         // for hiding
-        <div id="myScrollElement" className="hidinginmobile">
+        <div id="myScrollElement" className="hidinginmobile  ">
             {/* this is banner section */}
             <Helmet>
                 <meta charSet="utf-8" />
@@ -40,11 +41,45 @@ const Home = () => {
             </section>
             {/* ends */}
 
+
+
+
             {/* here is the principal section  */}
             <section>
                 <Principal></Principal>
             </section>
             {/* here is the principal section  ends */}
+
+
+
+
+
+            {/* click bit */}
+            <section className="mb-16">
+                <div className="flex justify-center my-5">
+
+                    <p className="w-full px-2 md:w-1/2 text-2xl font-semibold text-">
+                        "মাত্র ৯৯ টাকায় আজই কম্পিউটার শিখে নিজের ভবিষ্যত গড়ে তুলুন। ছোট একটি সিদ্ধান্ত বদলে দিতে পারে আপনার পুরো জীবন। সময় নষ্ট না করে আজই শুরু করুন। প্রযুক্তির সঙ্গে এগিয়ে যান, স্বপ্ন পূরণ করুন। সফলতার পথে প্রথম পদক্ষেপ নিন এখনই!"
+                    </p>
+
+                </div>
+
+                <div className='grid justify-center items-center'>
+                    <Link to={"/payment"}>
+
+                        <button className='animate-bounce text-3xl font-bold text-red-500 w-[300px] h-24 border-2 border-red-500 rounded-md hover:bg-red-500 hover:text-white'>
+
+                            ভতি হন
+
+                        </button>
+
+                    </Link>
+                </div>
+            </section>
+
+
+
+
 
             <section className="">
                 <Banner></Banner>
@@ -73,15 +108,15 @@ const Home = () => {
 
 
             {/* here is এক নজরে আমাদের websites detailes */}
-            <section>
+            <section className="">
                 <Facilites></Facilites>
             </section>
 
             {/* out teachers */}
-            <section>
+            {/* <section>
 
                 <Teachers></Teachers>
-            </section>
+            </section> */}
 
             {/* ends */}
 
